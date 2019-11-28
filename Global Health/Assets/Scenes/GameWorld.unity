@@ -1142,6 +1142,26 @@ PrefabInstance:
       propertyPath: economy
       value: Stable
       objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: healthCare
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: deathrate
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: casesPrevented
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: cureSucces
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 3645937793812612978, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: target
@@ -1425,6 +1445,21 @@ PrefabInstance:
       propertyPath: economy
       value: Bad
       objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: healthCare
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: deathrate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: casesPrevented
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3645937793812612991, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: m_IsActive
@@ -1656,10 +1691,30 @@ PrefabInstance:
       propertyPath: economy
       value: Stable
       objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: healthCare
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: deathrate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: casesPrevented
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: cureSucces
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3645937793812612979, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 9000
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3645937793812612978, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
@@ -1924,12 +1979,32 @@ PrefabInstance:
     - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: currentPopulation
-      value: 13
+      value: 666
       objectReference: {fileID: 0}
     - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: economy
       value: Poopoo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: cureSucces
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: casesPrevented
+      value: 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: deathrate
+      value: 1337
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: healthCare
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 3645937793812612978, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
