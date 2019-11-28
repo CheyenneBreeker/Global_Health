@@ -488,8 +488,8 @@ GameObject:
   - component: {fileID: 3645937793717114843}
   - component: {fileID: 3645937793717114820}
   m_Layer: 0
-  m_Name: City (2)
-  m_TagString: Untagged
+  m_Name: City
+  m_TagString: City
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -523,6 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6063c7de708ea824482a03f828e1ec3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPopulation: 0
 --- !u!65 &3645937793717114843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -967,7 +968,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 142
+    m_MaxSize: 179
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
