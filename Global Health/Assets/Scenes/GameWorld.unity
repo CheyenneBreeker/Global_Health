@@ -1142,6 +1142,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1541333169}
+    - target: {fileID: 3645937794747041010, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_Text
+      value: Mountain city
+      objectReference: {fileID: 0}
     - target: {fileID: 3645937792891485830, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -1410,6 +1415,11 @@ PrefabInstance:
       propertyPath: currentPopulation
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3645937793812612991, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3645937793812612978, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: target
@@ -1636,6 +1646,16 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1541333169}
+    - target: {fileID: 3645937794747041020, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_Name
+      value: City name
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937794747041010, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_Text
+      value: Sea city
+      objectReference: {fileID: 0}
     - target: {fileID: 3645937793613034919, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1891,6 +1911,16 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1541333169}
+    - target: {fileID: 3645937794747041020, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_Name
+      value: City name
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937794747041010, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_Text
+      value: Forest city
+      objectReference: {fileID: 0}
     - target: {fileID: 3645937793613034919, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
