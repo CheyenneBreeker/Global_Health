@@ -1711,11 +1711,6 @@ PrefabInstance:
       propertyPath: cureSucces
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 3645937793812612979, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3645937793812612978, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: target
