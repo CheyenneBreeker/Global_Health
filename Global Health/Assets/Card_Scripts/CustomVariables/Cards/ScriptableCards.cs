@@ -9,7 +9,15 @@ public class ScriptableCard : ScriptableObject
         public float cardCost;
         [Multiline]
         public string cardFlavorText;
-        
+
+
+
+    public string CardEffect;
+    //example: "ChangePopulation"
+    public int cardValue;
     
+
+
+
 }
 
