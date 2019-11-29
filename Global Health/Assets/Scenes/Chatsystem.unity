@@ -294,14 +294,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f304e015bfb4974a913f1bb0001fc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMessages: 25
-  chatPanel: {fileID: 184151161}
-  textObject: {fileID: 8661056535902339841, guid: f5a208f2cc0781e439c823aab62a3a3b,
+  maxMessages: 50
+  contentPanel: {fileID: 184151161}
+  textPrefab: {fileID: 8661056535902339841, guid: f5a208f2cc0781e439c823aab62a3a3b,
     type: 3}
-  chatBox: {fileID: 872626735}
+  inputBox: {fileID: 872626735}
   userName: Redmund
   playerMessageColor: {r: 1, g: 1, b: 1, a: 1}
-  systemMessageColor: {r: 0.6433726, g: 1, b: 0.6367924, a: 1}
+  systemMessageColor: {r: 1, g: 0.10587888, b: 0.06132078, a: 1}
   messageList: []
 --- !u!4 &134182628
 Transform:
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 0.3372549}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.67058825}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -953,10 +953,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0.5294118, g: 0.5294118, b: 0.5294118, a: 1}
+    m_HighlightedColor: {r: 0.67058825, g: 0.6784314, b: 0.67058825, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.5294118, g: 0.5294118, b: 0.5294118, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -975,7 +975,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 868114442}
   m_HandleRect: {fileID: 868114441}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

@@ -5,92 +5,81 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChatManager : MonoBehaviour
-{
-    public int maxMessages = 25;
+public class ChatManager : MonoBehaviour {
+    public int maxMessages = 50;
 
-    public GameObject chatPanel, textObject;
-    public InputField chatBox;
+    public GameObject contentPanel, textPrefab;
+    public InputField inputBox;
     public string userName;
 
     public Color playerMessageColor, systemMessageColor;
 
-    [SerializeField]
-    List<Message> messageList = new List<Message>();
+    [SerializeField] //This is only Serialized for debug reasons
+    List<Message> messageList = new List<Message> ();
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (chatBox.text != "")
-        {
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                SendMessageToChat(userName + ": " + chatBox.text, Message.MessageType.playerMessage);
-                chatBox.text = "";
-                chatBox.ActivateInputField();
+    void Update () {
+        if (inputBox.text != "") {
+            if (inputBox.text == "/system" && Input.GetKeyDown (KeyCode.Return)) {
+                SendMessageToChat ("This is a message sent by the system.", Message.MessageType.systemMessage);
+                inputBox.text = "";
+                inputBox.ActivateInputField ();
+            } else if (Input.GetKeyDown (KeyCode.Return)) {
+                SendMessageToChat (userName + ": " + inputBox.text, Message.MessageType.playerMessage);
+                inputBox.text = "";
+                inputBox.ActivateInputField ();
             }
-        }
-        else
-        {
-            if (!chatBox.isFocused && Input.GetKeyDown(KeyCode.Return))
-            {
-                SendMessageToChat("Activated chatbox", Message.MessageType.systemMessage);
-                chatBox.ActivateInputField();
+        } else {
+            if (!inputBox.isFocused && Input.GetKeyDown (KeyCode.Return)) {
+                inputBox.ActivateInputField ();
             }
         }
     }
 
-    public void SendMessageToChat(string text, Message.MessageType messageType)
-    {
-        if (messageList.Count >= maxMessages)
-        {
-            Destroy(messageList[0].textObject.gameObject);
-            messageList.Remove(messageList[0]);
+    public void SendMessageToChat (string text, Message.MessageType messageType) {
+        if (messageList.Count >= maxMessages) {
+            Destroy (messageList[0].textPrefab.gameObject);
+            messageList.Remove (messageList[0]);
         }
-        Message newMessage = new Message();
+        Message newMessage = new Message ();
 
         newMessage.text = text;
 
-        GameObject newText = Instantiate(textObject, chatPanel.transform);
-        newMessage.textObject = newText.GetComponent<Text>();
+        GameObject newText = Instantiate (textPrefab, contentPanel.transform);
+        newMessage.textPrefab = newText.GetComponent<Text> ();
 
-        newMessage.textObject.text = newMessage.text;
-        newMessage.textObject.color = MessageTypeColor(messageType);
+        newMessage.textPrefab.text = newMessage.text;
+        newMessage.textPrefab.color = MessageTypeColor (messageType);
 
-        messageList.Add(newMessage);
+        messageList.Add (newMessage);
     }
 
-    Color MessageTypeColor(Message.MessageType messageType)
-    {
+    Color MessageTypeColor (Message.MessageType messageType) {
         Color color;
 
-        switch(messageType)
-        {
+        switch (messageType) {
             case Message.MessageType.playerMessage:
-            color = playerMessageColor;
-            break;
+                color = playerMessageColor;
+                break;
 
             case Message.MessageType.systemMessage:
-            color = systemMessageColor;
-            break;
+                color = systemMessageColor;
+                break;
 
             default:
-            color = systemMessageColor;
-            break;
+                color = systemMessageColor;
+                break;
         }
         return color;
     }
 }
 
 [System.Serializable]
-public class Message
-{
+public class Message {
     public string text;
-    public Text textObject;
+    public Text textPrefab;
     public MessageType messageType;
 
-    public enum MessageType
-    {
+    public enum MessageType {
         playerMessage,
         systemMessage
     }
