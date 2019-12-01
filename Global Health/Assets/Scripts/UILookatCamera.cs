@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class UILookatCamera : MonoBehaviour
 {
-    public Transform target;
+    private GameObject target;
+
+    private void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("MainCamera");
+    }
     // Start is called before the first frame update
     void Update()
     {
-        Vector3 targetPostition = new Vector3(target.position.x,
+        Vector3 targetPostition = new Vector3(target.gameObject.transform.position.x,
                                        this.transform.position.y,
-                                       target.position.z);
+                                       target.gameObject.transform.position.z);
         this.transform.LookAt(targetPostition);
     }
 }
