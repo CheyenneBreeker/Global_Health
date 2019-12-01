@@ -9,7 +9,7 @@ public class Test : MonoBehaviour
 
     void Start()
     {
-        test.EventTrigger();
+        // test.EventTrigger();
     }
 
     // Update is called once per frame
