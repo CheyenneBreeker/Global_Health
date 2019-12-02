@@ -47,6 +47,7 @@ public class EventCardDescription : MonoBehaviour
     public void OnButtonClick1()
     {
         SetButtonsNonActive();
+        test.TakeCard();
     }
 
     public void OnButtonClick2()
@@ -66,9 +67,9 @@ public class EventCardDescription : MonoBehaviour
 
     public void SetButtonsNonActive()
     {
-        choice1.gameObject.SetActive(true);
-        choice2.gameObject.SetActive(true);
-        choice3.gameObject.SetActive(true);
-        choice4.gameObject.SetActive(true);
+        choice1.gameObject.SetActive(false);
+        choice2.gameObject.SetActive(false);
+        choice3.gameObject.SetActive(false);
+        choice4.gameObject.SetActive(false);
     }
 }
