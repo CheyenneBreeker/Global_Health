@@ -46,7 +46,7 @@ public class CardController : MonoBehaviour
             GameObject playingCard = CardUI;
             
             playingCard.transform.Find("CardName").GetComponent<Text>().text = Card.cardName.ToString();
-            playingCard.transform.Find("CardCost").GetComponent<Text>().text = Card.cardCost.ToString();
+            playingCard.transform.Find("CardCost").GetComponent<Text>().text = "C: "+ Card.cardCost.ToString();
             playingCard.transform.Find("CardSummary").GetComponent<Text>().text = Card.cardFlavorText.ToString();
             playingCard.GetComponent<LinkedCard>().linkedCard = Card ;
 
@@ -61,6 +61,7 @@ public class CardController : MonoBehaviour
     {
         //play effects in gameworld
         this.SendMessage(PlayedCard.CardEffect.ToString(), PlayedCard.cardValue, SendMessageOptions.RequireReceiver);
+        //GameWorld.Instance.substractIMU(PlayedCard.cardCost);
         PlayerDeck.Remove(PlayedCard);
         CardsPlayed++;
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CardEffects : MonoBehaviour
 {
+
     public void ChangePopulation()
     {
         Debug.Log("ChangedThePopulation.");
