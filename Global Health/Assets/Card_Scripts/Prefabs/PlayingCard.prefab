@@ -246,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkedCard: {fileID: 11400000, guid: bedcb80a8459fc741822bb12e944b973, type: 2}
   cardController: {fileID: 0}
+  CardSelected: 0
 --- !u!114 &-5776106065560251762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,4 +351,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25789
+  m_Text: 'C: 25789'

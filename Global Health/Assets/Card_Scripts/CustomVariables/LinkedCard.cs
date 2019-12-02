@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LinkedCard : MonoBehaviour
 {
@@ -17,12 +18,32 @@ public class LinkedCard : MonoBehaviour
     {
         if (cardController.CardsPlayed < cardController.MaxCardsPlayed)
         {
-            cardController.PlayCard(linkedCard);
-            Object.Destroy(this.gameObject);
+            if (cardController.selectedCard == gameObject)
+        {
+                cardController.PlayCard(linkedCard);
+                Object.Destroy(this.gameObject);
+            }
+            else
+            {
+                cardController.selectedCard = gameObject;
+
+            }
         }
         else
         {
             Debug.Log("Max cards reached this turn");
+        }
+    }
+
+    public void Update()
+    {
+        if (cardController.selectedCard == gameObject)
+        {
+            gameObject.GetComponent<Image>().color = new Color(255, 0, 0);
+        }
+        else
+        {
+            gameObject.GetComponent<Image>().color = new Color(255, 255, 255);
         }
     }
 }

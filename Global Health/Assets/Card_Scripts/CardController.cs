@@ -13,6 +13,8 @@ public class CardController : MonoBehaviour
     public int CardsPerTurn = 5;
     public List<ScriptableCard> PlayerDeck;
     private List<ScriptableCard> cardDeck;
+    public List<GameObject> CardsInHand;
+    public GameObject selectedCard;
     public int CardsPlayed;
     public int MaxCardsPlayed = 3;
 
@@ -53,6 +55,7 @@ public class CardController : MonoBehaviour
             GameObject NewCard = Instantiate(playingCard, new Vector3(spawnPosition, CardContainer.transform.position.y + playingCard.GetComponent<RectTransform>().rect.height / 2, CardContainer.transform.position.z),Quaternion.identity);
             NewCard.transform.parent = CardContainer.transform;
             spawnPosition += NewCard.GetComponent<RectTransform>().rect.width;
+            CardsInHand.Add(NewCard);
 
         }
     }
