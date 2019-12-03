@@ -14,6 +14,7 @@ public class EventCardDescription : MonoBehaviour
     public Button choice4;
 
     public EventCardDeck test;
+    public EventCardEffects effect;
 
     public void Start()
     {
@@ -53,6 +54,7 @@ public class EventCardDescription : MonoBehaviour
     public void OnButtonClick2()
     {
         SetButtonsNonActive();
+        effect.CardEffect(card._name);
     }
 
     public void OnButtonClick3()
