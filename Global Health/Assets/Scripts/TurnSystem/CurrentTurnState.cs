@@ -11,17 +11,18 @@ public class CurrentTurnState : IState
     public void Enter()
     {
         Debug.Log("ENTERING CURRENT TURN STATE");
-        Execute();
+        owner.tCounter.IncreaseTurnCount();
+        owner.tButton.gameObject.SetActive(true);
     }
 
     public void Execute()
     {
         Debug.Log("UPDATING CURRENT TURN STATE");
-        Exit();
     }
 
     public void Exit()
     {
         Debug.Log("EXITING CURRENT TURN STATE");
+        owner.tButton.gameObject.SetActive(false);
     }
 }

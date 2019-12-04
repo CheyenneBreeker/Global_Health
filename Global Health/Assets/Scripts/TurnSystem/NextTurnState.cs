@@ -5,26 +5,27 @@ using UnityEngine;
 public class NextTurnState : IState
 {
     TurnManager owner;
-    TurnCounter tCounter;
 
     public NextTurnState(TurnManager owner) { this.owner = owner; }
 
     public void Enter()
     {
         Debug.Log("ENTERING NEXT TURN STATE");
-        tCounter.IncreaseTurnCount();
-        Execute();
     }
 
     public void Execute()
     {
         Debug.Log("UPDATING NEXT TURN STATE");
-        Exit();
+
+        // Temporary way to return to CurrentTurnState
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            owner.BeginTurn();
+        }
     }
 
     public void Exit()
     {
         Debug.Log("EXITING NEXT TURN STATE");
-        owner.BeginTurn();
     }
 }
