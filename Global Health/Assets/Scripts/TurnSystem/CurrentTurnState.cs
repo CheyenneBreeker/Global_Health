@@ -11,11 +11,13 @@ public class CurrentTurnState : IState
     public void Enter()
     {
         Debug.Log("ENTERING CURRENT TURN STATE");
+        Execute();
     }
 
     public void Execute()
     {
         Debug.Log("UPDATING CURRENT TURN STATE");
+        Exit();
     }
 
     public void Exit()

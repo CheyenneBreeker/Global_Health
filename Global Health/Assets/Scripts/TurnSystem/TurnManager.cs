@@ -15,4 +15,14 @@ public class TurnManager : MonoBehaviour
     {
         stateMachine.Update();
     }
+
+    public void NextTurn()
+    {
+        stateMachine.ChangeState(new NextTurnState(this));
+    }
+
+    public void BeginTurn()
+    {
+        stateMachine.ChangeState(new CurrentTurnState(this));
+    }
 }

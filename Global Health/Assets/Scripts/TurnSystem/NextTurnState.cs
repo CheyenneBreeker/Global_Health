@@ -5,21 +5,26 @@ using UnityEngine;
 public class NextTurnState : IState
 {
     TurnManager owner;
+    TurnCounter tCounter;
 
     public NextTurnState(TurnManager owner) { this.owner = owner; }
 
     public void Enter()
     {
-        Debug.Log("ENTERING CURRENT TURN STATE");
+        Debug.Log("ENTERING NEXT TURN STATE");
+        tCounter.IncreaseTurnCount();
+        Execute();
     }
 
     public void Execute()
     {
-        Debug.Log("UPDATING CURRENT TURN STATE");
+        Debug.Log("UPDATING NEXT TURN STATE");
+        Exit();
     }
 
     public void Exit()
     {
-        Debug.Log("EXITING CURRENT TURN STATE");
+        Debug.Log("EXITING NEXT TURN STATE");
+        owner.BeginTurn();
     }
 }
