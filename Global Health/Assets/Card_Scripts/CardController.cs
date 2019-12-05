@@ -64,7 +64,7 @@ public class CardController : MonoBehaviour
     {
         //play effects in gameworld
         this.SendMessage(PlayedCard.CardEffect.ToString(), PlayedCard.cardValue, SendMessageOptions.RequireReceiver);
-        //GameWorld.Instance.substractIMU(PlayedCard.cardCost);
+        GameWorld.Instance.substractIMU(PlayedCard.cardCost);
         PlayerDeck.Remove(PlayedCard);
         CardsPlayed++;
     }
