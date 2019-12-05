@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class NextTurnState : IState
 {
+    // Inits TurnManager class.
     TurnManager owner;
-
     public NextTurnState(TurnManager owner) { this.owner = owner; }
 
+    // Method which activates when the state is entered.
     public void Enter()
     {
         Debug.Log("ENTERING NEXT TURN STATE");
     }
 
+    // Method which activates when the Enter method has been run through.
     public void Execute()
     {
         Debug.Log("UPDATING NEXT TURN STATE");
@@ -24,6 +26,7 @@ public class NextTurnState : IState
         }
     }
 
+    // Method which activates when the state is exited.
     public void Exit()
     {
         Debug.Log("EXITING NEXT TURN STATE");
