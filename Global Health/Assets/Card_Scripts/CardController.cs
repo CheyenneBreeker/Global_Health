@@ -63,8 +63,11 @@ public class CardController : MonoBehaviour
 
     public void PlayCard(ScriptableCard PlayedCard)
     {
+        object[] cardvariables = new object[2];
+        cardvariables[0] = PlayedCard.affectedCity;
+        cardvariables[1] = PlayedCard.cardValue;
         //play effects in gameworld
-        this.SendMessage(PlayedCard.CardEffect.ToString(), PlayedCard.cardValue, SendMessageOptions.RequireReceiver);
+        this.SendMessage(PlayedCard.CardEffect.ToString(), cardvariables, SendMessageOptions.RequireReceiver);
         GameWorld.Instance.substractIMU(PlayedCard.cardCost);
         PlayerDeck.Remove(PlayedCard);
         CardsPlayed++;

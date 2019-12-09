@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3404116956659548356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3404116956659548355}
+  - component: {fileID: 3404116956659548354}
+  - component: {fileID: 3404116956659548357}
+  - component: {fileID: 3404116956659548352}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3404116956659548355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404116956659548356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.72486776, y: 1.3660076, z: -4.1461215}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3404116956659548354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404116956659548356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf26548dff17194d8f4c3d1b75d76e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardDeck:
+  - {fileID: 11400000, guid: 401c6d628b945bb41b9ddb40da9616e3, type: 2}
+  - {fileID: 11400000, guid: f6af48e9773aac442a381794a656e613, type: 2}
+  - {fileID: 11400000, guid: 5bd7785b19dfa814f917da0fba2f7c12, type: 2}
+  - {fileID: 11400000, guid: 6f1f36d9bedd7394e9a7af5221b00a04, type: 2}
+  - {fileID: 11400000, guid: 86de415242e81b24fb51aa1d7f0cce15, type: 2}
+  - {fileID: 11400000, guid: 835f7d39b54eb334fb1d971ad12092b6, type: 2}
+  - {fileID: 11400000, guid: 87f1f025696fe5348a680af2240e02d6, type: 2}
+  - {fileID: 11400000, guid: 6b1116903fef8e44691c8435273ed51a, type: 2}
+--- !u!114 &3404116956659548357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404116956659548356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e91f7149c89dc44a866166bb0b94d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardUI: {fileID: 4065373548650652759, guid: 8006e42d0c14a0245806578147657c88, type: 3}
+  CardContainer: {fileID: 0}
+  CardsPerTurn: 5
+  PlayerDeck: []
+  CardsInHand: []
+  selectedCard: {fileID: 0}
+  CardsPlayed: 0
+  MaxCardsPlayed: 3
+--- !u!114 &3404116956659548352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404116956659548356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ec14d18c8e6614d81675954d34b443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
