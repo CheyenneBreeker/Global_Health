@@ -10,16 +10,16 @@ public class CardEffects : MonoBehaviour
         int affectedCity = (int)CardVariables[0];
         int cardValue = (int)CardVariables[1];
 
-        Debug.Log("ChangedThePopulation.");
         GameWorld.Instance.cities[affectedCity].GetComponent<City>().currentPopulation += cardValue;
+        Debug.Log(GameWorld.Instance.cities[affectedCity].GetComponent<City>().currentPopulation);
     }
 
-    public void ChangeHealthcare(object[] CardVariables)
+    public void ChangeHealthCare(object[] CardVariables)
     {
         int affectedCity = (int)CardVariables[0];
         int cardValue = (int)CardVariables[1];
 
-        Debug.Log("ChangedThePopulation.");
         GameWorld.Instance.cities[affectedCity].GetComponent<City>().healthCare += cardValue;
+        Debug.Log(GameWorld.Instance.cities[affectedCity].GetComponent<City>().healthCare);
     }
 }

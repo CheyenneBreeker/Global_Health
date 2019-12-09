@@ -22,7 +22,7 @@ public class NextTurnState : IState
         // Temporary way to return to CurrentTurnState
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            owner.BeginTurn();
+           owner.BeginTurn();
         }
     }
 
@@ -30,5 +30,6 @@ public class NextTurnState : IState
     public void Exit()
     {
         Debug.Log("EXITING NEXT TURN STATE");
+        owner.cardController.CardsPlayed = 0;
     }
 }

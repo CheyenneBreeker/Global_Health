@@ -36,6 +36,13 @@ public class TurnManager : MonoBehaviour
     // Method to go to the CurrentTurnState.
     public void BeginTurn()
     {
+        //remove cards on canvas
+        foreach (Transform child in cardController.CardContainer.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+        cardController.CardsPlayed = 0;
         stateMachine.ChangeState(new CurrentTurnState(this));
+        
     }
 }
