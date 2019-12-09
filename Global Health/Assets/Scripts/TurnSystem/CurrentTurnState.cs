@@ -13,7 +13,7 @@ public class CurrentTurnState : IState
     {
         Debug.Log("ENTERING CURRENT TURN STATE");
 
-        // Increases turnCount value and enables the NextTurn button.
+        // Increases turnCount value, updates the counter text and enables the NextTurn button.
         owner.tCounter.IncreaseTurnCount();
         owner.tButton.gameObject.SetActive(true);
     }
