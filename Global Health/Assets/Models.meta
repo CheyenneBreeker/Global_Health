@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Global Health/Assets/Models.meta
 guid: aedd48842440889439bfdf37906c6f5c
+=======
+guid: ca268b3723f946a468232bc6f6e01e4e
+>>>>>>> TurnSystem:Global Health/Assets/Scripts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

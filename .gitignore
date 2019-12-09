@@ -60,3 +60,5 @@ crashlytics-build.properties
 /Global Health/Library
 /Global Health/Temp
 Global Health/.vscode/settings.json
+
+*.meta
