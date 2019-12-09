@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/GameWorld.unity
     guid: 8366e7a867ab5934ab788720b4550056
-  - enabled: 1
+  - enabled: 0
     path: Assets/SWNetwork/Scenes/LobbyScene.unity
     guid: d31d59fea45914a0289f5eab75dab0a6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SocketWeaverNETRoomTest.unity
     guid: 4ce91c8666ff5a14ab2cb4223660aaa0
   m_configObjects: {}
