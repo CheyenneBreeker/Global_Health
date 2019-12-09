@@ -20,10 +20,6 @@ public class TurnCounter : MonoBehaviour
     public void IncreaseTurnCount()
     {
         turnCount++;
-
-        if (turnCount > 1)
-        {
-            turnCountText.text = "Week: " + turnCount;
-        }
+        turnCountText.text = "Week: " + turnCount;
     }
 }

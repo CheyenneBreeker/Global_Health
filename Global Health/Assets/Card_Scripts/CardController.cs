@@ -21,10 +21,10 @@ public class CardController : MonoBehaviour
     private void Start()
     {
         cardDeck = GetComponent<CardDeck>().cardDeck;
-        GetCards();
+        //GetCards();
     }
 
-    private void GetCards()
+    public void GetCards()
     {
         for (int i = 0; i < CardsPerTurn; i++)
         {
@@ -35,9 +35,10 @@ public class CardController : MonoBehaviour
         DisplayCards(PlayerDeck);
     }
 
-    private void LoseCards()
+    public void LoseCards()
     {
         PlayerDeck.Clear();
+        CardsInHand.Clear();
     }
 
     private void DisplayCards(List<ScriptableCard> PlayerDeck)

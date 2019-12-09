@@ -8,6 +8,9 @@ public class TurnManager : MonoBehaviour
     // State Machine.
     StateMachine stateMachine = new StateMachine();
 
+    // Card Controller
+    public CardController cardController;
+
     // UI elements.
     public TurnCounter tCounter;
     public Button tButton;
