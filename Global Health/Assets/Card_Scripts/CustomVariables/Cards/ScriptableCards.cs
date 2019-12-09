@@ -15,7 +15,10 @@ public class ScriptableCard : ScriptableObject
     public string CardEffect;
     //example: "ChangePopulation"
     public int cardValue;
-    
+
+    [Header("0 for City 1, 1 for City 2, 2 for City 3, 3 for city 4")]
+    public int affectedCity;
+
 
 
 
