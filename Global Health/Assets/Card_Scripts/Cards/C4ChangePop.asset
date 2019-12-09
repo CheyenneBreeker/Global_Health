@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: IncreaseHC
+  m_Name: C4ChangePop
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableCard
-  cardName: Increase HealthCare
-  cardCost: 5000
-  cardFlavorText: Increase Healthcare in Forest City
-  CardEffect: ChangeHealthcare
-  cardValue: 2
-  affectedCity: 0
+  cardName: Increase Population Sea City
+  cardCost: 10000
+  cardFlavorText: Increase the population of the Sea city
+  CardEffect: ChangePopulation
+  cardValue: 50
+  affectedCity: 3
