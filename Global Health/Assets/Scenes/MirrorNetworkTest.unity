@@ -209,12 +209,12 @@ MonoBehaviour:
   dontDestroyOnLoad: 1
   runInBackground: 1
   startOnHeadless: 1
-  serverTickRate: 30
+  serverTickRate: 60
   showDebugMessages: 0
   offlineScene: 
   onlineScene: 
   transport: {fileID: 447909287}
-  networkAddress: localhost
+  networkAddress: 145.109.158.200
   maxConnections: 4
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 5255273725665587266, guid: 77499de487179884fb596cf1f8e81c3b,
