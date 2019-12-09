@@ -1,16 +1,20 @@
-﻿using System.Collections;
+﻿using Mirror;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomizePosition : MonoBehaviour
+public class RandomizePosition : NetworkBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private Transform child;
+
+    public override void OnStartLocalPlayer()
     {
-        StartCoroutine(_RandomizePosition());
+        base.OnStartLocalPlayer();
+        StartCoroutine(RandomPosition());
     }
 
-    private IEnumerator _RandomizePosition()
+    private IEnumerator RandomPosition()
     {
         WaitForSeconds wait = new WaitForSeconds(1);
         Vector3 startPosition = transform.position;
@@ -18,6 +22,7 @@ public class RandomizePosition : MonoBehaviour
         while (true)
         {
             transform.position = startPosition + ReturnRandom();
+            child.localPosition = ReturnRandom();
             yield return wait;
         }
     }
