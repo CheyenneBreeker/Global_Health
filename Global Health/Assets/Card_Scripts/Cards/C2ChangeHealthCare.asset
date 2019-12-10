@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableCard
   cardName: ChangeHealthcare
   cardCost: 4000
-  cardFlavorText: Change health care of the mountain city
+  cardFlavorText: Change health care of the 2nd  city
   CardEffect: ChangeHealthCare
-  cardValue: 1
+  cardValue: 0
+  NegativeValue: 0
   affectedCity: 1
+  AddedBuilding: 

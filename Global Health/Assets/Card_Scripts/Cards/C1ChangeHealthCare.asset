@@ -17,4 +17,6 @@ MonoBehaviour:
   cardFlavorText: Change health care of the forest  city
   CardEffect: ChangeHealthCare
   cardValue: 0
+  NegativeValue: 0
   affectedCity: 0
+  AddedBuilding: 

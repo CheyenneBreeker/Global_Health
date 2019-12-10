@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: C2ChangePop
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableCard
-  cardName: Increase Population Mountain City
+  cardName: Increase Population 2nd City
   cardCost: 10000
-  cardFlavorText: Increase the population of the Mountain city
+  cardFlavorText: Increase the population of the 2nd city
   CardEffect: ChangePopulation
   cardValue: 50
+  NegativeValue: 0
   affectedCity: 1
+  AddedBuilding: 
