@@ -7,7 +7,7 @@ public  class GameWorld : MonoBehaviour
 {
     public double imu;
     public int population;
-    public GameObject[] cities;
+    public City[] cities;
     public static GameWorld Instance { get; private set; }
     private void Awake()
     {
@@ -18,17 +18,8 @@ public  class GameWorld : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        FindAllCities();
         UpdatePopulation();
         UpdateGameUI();
-        
-    }
-
-    public void FindAllCities()
-    {
-        var objects = GameObject.FindGameObjectsWithTag("City");
-        cities = new GameObject[objects.Length];
-        cities = objects;
     }
     public void substractIMU(double spend)
     {
@@ -52,7 +43,7 @@ public  class GameWorld : MonoBehaviour
         population = 0;
         for (int i = 0; i < cities.Length; i++)
         {
-            cities[i].SendMessage("SendPopulation");
+            cities[i].SendPopulation();
         }
         yield return new WaitForSeconds(delayValue);
         worldPopulation.text = "World population: " + population.ToString();

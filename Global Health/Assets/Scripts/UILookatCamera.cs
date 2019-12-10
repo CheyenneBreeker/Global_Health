@@ -17,5 +17,9 @@ public class UILookatCamera : MonoBehaviour
                                        this.transform.position.y,
                                        target.gameObject.transform.position.z);
         this.transform.LookAt(targetPostition);
+
+        Vector3 relativePos = target.gameObject.transform.position - transform.position;
+        Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+        transform.rotation = rotation;
     }
 }
