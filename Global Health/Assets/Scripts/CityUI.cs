@@ -20,8 +20,7 @@ public class CityUI : MonoBehaviour
         economy.text = "Economy: " + n_economy;
         casesPrevented.text = "Cases prevented: " + n_casesPrevented.ToString();
         cureSucces.text = "Cure succes: " + n_cureSucces.ToString();
-
-}
+    }
 
     //Turning on the UI in gameworld
     public bool isUiActive;

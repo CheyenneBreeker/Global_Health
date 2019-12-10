@@ -21,9 +21,15 @@ public  class GameWorld : MonoBehaviour
         UpdatePopulation();
         UpdateGameUI();
     }
-    public void substractIMU(double spend)
+    public void substractIMU(double units)
     {
-        imu -= spend;
+        imu -= units;
+        playerMoney.text = "IMU: " + imu.ToString();
+    }
+
+    public void increaseIMU(double units)
+    {
+        imu += units;
         playerMoney.text = "IMU: " + imu.ToString();
     }
 
@@ -52,7 +58,7 @@ public  class GameWorld : MonoBehaviour
 
     public Text worldPopulation;
     public Text playerMoney;
-    void UpdateGameUI()
+    public void UpdateGameUI()
     {
         playerMoney.text = "IMU: " + imu.ToString();
         worldPopulation.text = "World population: " + population.ToString();
