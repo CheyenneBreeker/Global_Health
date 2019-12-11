@@ -2246,6 +2246,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventCard
       objectReference: {fileID: 0}
+    - target: {fileID: 1760081549063796402, guid: 0ed947c8727921d44863dc626ab6a5a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1760081549063796414, guid: 0ed947c8727921d44863dc626ab6a5a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2306,5 +2311,10 @@ PrefabInstance:
       propertyPath: test
       value: 
       objectReference: {fileID: 150176113}
+    - target: {fileID: 1760081547518486019, guid: 0ed947c8727921d44863dc626ab6a5a9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ed947c8727921d44863dc626ab6a5a9, type: 3}

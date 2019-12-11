@@ -21,7 +21,6 @@ public class EventCardDeck : MonoBehaviour
         deck.Add(event2);
 
         Shuffle();
-        TakeCard();
     }
 
     public void Shuffle()
