@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: C2ChangePop
+  m_Name: C1ChangePop
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableCard
-  cardName: Increase Population 2nd City
+  cardName: Increase Population Forest City
   cardCost: 10000
-  cardFlavorText: Increase the population of the 2nd city
+  cardFlavorText: Increase the population of the forest city
   CardEffect: ChangePopulation
   cardValue: 50
   NegativeValue: 0
-  affectedCity: 1
+  affectedCity: 0
   AddedBuilding: 

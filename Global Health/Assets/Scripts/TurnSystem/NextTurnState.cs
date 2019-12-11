@@ -31,5 +31,7 @@ public class NextTurnState : IState
     {
         Debug.Log("EXITING NEXT TURN STATE");
         owner.cardController.CardsPlayed = 0;
+        GameWorld.Instance.UpdatePopulation();
+        GameWorld.Instance.UpdateGameUI();
     }
 }
