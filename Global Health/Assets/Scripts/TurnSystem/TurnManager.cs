@@ -15,6 +15,8 @@ public class TurnManager : MonoBehaviour
     public TurnCounter tCounter;
     public Button tButton;
 
+    public EventCardDeck eventCardDeck;
+
     // Sets the state to enter at the start of the game.
     private void Start()
     {

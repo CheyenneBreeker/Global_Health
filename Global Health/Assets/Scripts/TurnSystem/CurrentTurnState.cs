@@ -34,5 +34,7 @@ public class CurrentTurnState : IState
         // Disables the NextTurn button when exiting the CurrentTurn state.
         owner.tButton.gameObject.SetActive(false);
         owner.cardController.LoseCards();
+
+        owner.eventCardDeck.TakeCard();
     }
 }
