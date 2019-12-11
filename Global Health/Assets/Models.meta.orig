@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:Global Health/Assets/Models.meta
+guid: aedd48842440889439bfdf37906c6f5c
+=======
+guid: ca268b3723f946a468232bc6f6e01e4e
+>>>>>>> TurnSystem:Global Health/Assets/Scripts.meta
+=======
+guid: 2929bd35af9c8ff46b038803fc9e27ae
+>>>>>>> CardSystem
+=======
+guid: 137c08b974c1c524e86ce20b7e2ea75a
+>>>>>>> Event-System
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
