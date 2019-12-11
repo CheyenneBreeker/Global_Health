@@ -35,6 +35,6 @@ public class CurrentTurnState : IState
         owner.tButton.gameObject.SetActive(false);
         owner.cardController.LoseCards();
 
-        owner.eventCardDeck.TakeCard();
+        owner.eventCardDeck.EventTrigger();
     }
 }

@@ -21,7 +21,7 @@ public class CardController : MonoBehaviour
     private void Start()
     {
         cardDeck = GetComponent<CardDeck>().cardDeck;
-        //GetCards();
+        GetCards();
     }
 
     public void GetCards()
