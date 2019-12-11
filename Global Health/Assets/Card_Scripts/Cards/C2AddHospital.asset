@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: C4ChangePop
-  m_EditorClassIdentifier: Assembly-CSharp::ScriptableCard
-  cardName: Increase Population 4th City
+  m_Script: {fileID: 11500000, guid: 79f44976a3a22124e812392c2574986b, type: 3}
+  m_Name: C2AddHospital
+  m_EditorClassIdentifier: 
+  cardName: Add hospital City 2
   cardCost: 10000
-  cardFlavorText: Increase the population of the 4th city
-  CardEffect: ChangePopulation
-  cardValue: 50
+  cardFlavorText: Add a hospital to City 2
+  CardEffect: ConstructBuilding
+  cardValue: 0
   NegativeValue: 0
-  affectedCity: 3
-  AddedBuilding: 
+  affectedCity: 1
+  AddedBuilding: Hospital

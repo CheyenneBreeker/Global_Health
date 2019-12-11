@@ -6,7 +6,7 @@ Preset:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ChangeHealthCare
+  m_Name: ConstructHospital
   m_TargetType:
     m_NativeTypeID: 114
     m_ManagedTypePPtr: {fileID: 11500000, guid: 79f44976a3a22124e812392c2574986b,
@@ -27,23 +27,23 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: cardName
-    value: City 1 Change Healthcare
+    value: Add hospital City 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: cardCost
-    value: 4000
+    value: 10000
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: cardFlavorText
-    value: Improve the healthcare of City 1
+    value: Add a hospital to City 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CardEffect
-    value: ChangeHealthCare
+    value: ConstructBuilding
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: cardValue
-    value: 2
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: NegativeValue
@@ -55,5 +55,5 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: AddedBuilding
-    value: 
+    value: Hospital
     objectReference: {fileID: 0}

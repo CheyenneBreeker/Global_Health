@@ -841,7 +841,7 @@ PrefabInstance:
     - target: {fileID: 3404116956659548356, guid: b5ef3e529d968fc4f96ffc5d2610390a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3404116956659548355, guid: b5ef3e529d968fc4f96ffc5d2610390a,
         type: 3}
@@ -903,6 +903,71 @@ PrefabInstance:
       propertyPath: CardContainer
       value: 
       objectReference: {fileID: 849289651}
+    - target: {fileID: 3404116956659548354, guid: b5ef3e529d968fc4f96ffc5d2610390a,
+        type: 3}
+      propertyPath: cardDeck.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404116956659548354, guid: b5ef3e529d968fc4f96ffc5d2610390a,
+        type: 3}
+      propertyPath: cardDeck.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e783ec3f78fe85e499f5c6c728aa049d,
+        type: 2}
+    - target: {fileID: 3404116956659548354, guid: b5ef3e529d968fc4f96ffc5d2610390a,
+        type: 3}
+      propertyPath: cardDeck.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: c29650c152071ad4cab3cc01bfcb83c3,
+        type: 2}
+    - target: {fileID: 3404116956659548354, guid: b5ef3e529d968fc4f96ffc5d2610390a,
+        type: 3}
+      propertyPath: cardDeck.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e9563456713adf4b8c44e8412fbd820,
+        type: 2}
+    - target: {fileID: 3404116956659548354, guid: b5ef3e529d968fc4f96ffc5d2610390a,
+        type: 3}
+      propertyPath: cardDeck.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: e19762ef63ac44e4bb4ec3c9d0b78dc3,
+        type: 2}
+    - target: {fileID: 3404116956659548354, guid: b5ef3e529d968fc4f96ffc5d2610390a,
+        type: 3}
+      propertyPath: cardDeck.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7290f6ecda5b79d42b437c0b6bc0034b,
+        type: 2}
+    - target: {fileID: 3404116956659548354, guid: b5ef3e529d968fc4f96ffc5d2610390a,
+        type: 3}
+      propertyPath: cardDeck.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: d52cb8b2f8ee4b74689d12293d33dd92,
+        type: 2}
+    - target: {fileID: 3404116956659548354, guid: b5ef3e529d968fc4f96ffc5d2610390a,
+        type: 3}
+      propertyPath: cardDeck.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19f8ea365c7abd145af215f507727474,
+        type: 2}
+    - target: {fileID: 3404116956659548354, guid: b5ef3e529d968fc4f96ffc5d2610390a,
+        type: 3}
+      propertyPath: cardDeck.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 55e3e848aa51b1741b6b1f2ef33aecde,
+        type: 2}
+    - target: {fileID: 3404116956659548354, guid: b5ef3e529d968fc4f96ffc5d2610390a,
+        type: 3}
+      propertyPath: cardDeck.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: b2e0bffac2a0b9e44a771ec5e9bc95e2,
+        type: 2}
+    - target: {fileID: 3404116956659548354, guid: b5ef3e529d968fc4f96ffc5d2610390a,
+        type: 3}
+      propertyPath: cardDeck.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ee71c97d4f17cd4fad6924ea4573767,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5ef3e529d968fc4f96ffc5d2610390a, type: 3}
 --- !u!1001 &416847520
@@ -917,6 +982,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventCardDeck
       objectReference: {fileID: 0}
+    - target: {fileID: 69024533520560259, guid: 68fa1a164d195804e8a78e2e4fd9f286,
+        type: 3}
+      propertyPath: newDescription
+      value: 
+      objectReference: {fileID: 741561637}
     - target: {fileID: 69024533520560263, guid: 68fa1a164d195804e8a78e2e4fd9f286,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -972,11 +1042,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 69024533520560259, guid: 68fa1a164d195804e8a78e2e4fd9f286,
-        type: 3}
-      propertyPath: newDescription
-      value: 
-      objectReference: {fileID: 741561637}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68fa1a164d195804e8a78e2e4fd9f286, type: 3}
 --- !u!1 &488053276
@@ -1229,7 +1294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daedf1e8f0d6e7e4e81a27effd2b625a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardController: {fileID: 0}
+  cardController: {fileID: 2067746652}
   tCounter: {fileID: 488053278}
   tButton: {fileID: 489876443}
   eventCardDeck: {fileID: 54982584}
@@ -2584,6 +2649,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain city
       objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: currentPopulation
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: economy
+      value: Stable
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: healthCare
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: deathrate
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: casesPrevented
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: cureSucces
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937792891485830, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793613034919, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 03c34d4ee622e6b44a9c783ca220e19e, type: 2}
     - target: {fileID: 3645937793717114822, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2639,60 +2744,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: currentPopulation
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: economy
-      value: Stable
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: healthCare
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: deathrate
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: casesPrevented
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: cureSucces
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 3645937793812612978, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1541333169}
-    - target: {fileID: 3645937794747041010, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: m_Text
-      value: Mountain city
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937792891485830, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793613034919, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 03c34d4ee622e6b44a9c783ca220e19e, type: 2}
     - target: {fileID: 3645937793812612991, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937794747041010, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_Text
+      value: Mountain city
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67c968b5a680c954382aa03811c692d7, type: 3}
@@ -2990,6 +3055,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: River city
       objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: currentPopulation
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: economy
+      value: Bad
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: healthCare
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: deathrate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: casesPrevented
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3645937793717114822, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3044,31 +3134,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: currentPopulation
-      value: 43
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: economy
-      value: Bad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: healthCare
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: deathrate
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: casesPrevented
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3645937793812612978, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
@@ -3326,6 +3391,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sea city
       objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: currentPopulation
+      value: 98
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: economy
+      value: Stable
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: healthCare
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: deathrate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: casesPrevented
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: cureSucces
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793613034919, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2392e72496e63034fb40f4e21cad29d5, type: 2}
     - target: {fileID: 3645937793717114822, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3381,55 +3481,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: currentPopulation
-      value: 98
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: economy
-      value: Stable
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: healthCare
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: deathrate
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: casesPrevented
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: cureSucces
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 3645937793812612978, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1541333169}
-    - target: {fileID: 3645937794747041010, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: m_Text
-      value: Sea city
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793613034919, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2392e72496e63034fb40f4e21cad29d5, type: 2}
     - target: {fileID: 3645937793812612991, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937794747041010, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_Text
+      value: Sea city
       objectReference: {fileID: 0}
     - target: {fileID: 3645937794747041020, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
@@ -3817,6 +3882,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Forest city
       objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: currentPopulation
+      value: 103
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: economy
+      value: Good
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: cureSucces
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: casesPrevented
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: deathrate
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: healthCare
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937793613034919, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8471f4f9f9c3f494cb8f3c2145a8cc94, type: 2}
     - target: {fileID: 3645937793717114822, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3872,55 +3972,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: currentPopulation
-      value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: economy
-      value: Good
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: cureSucces
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: casesPrevented
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: deathrate
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793717114821, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: healthCare
-      value: 13
-      objectReference: {fileID: 0}
     - target: {fileID: 3645937793812612978, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1541333169}
-    - target: {fileID: 3645937794747041010, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: m_Text
-      value: Forest city
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645937793613034919, guid: 67c968b5a680c954382aa03811c692d7,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8471f4f9f9c3f494cb8f3c2145a8cc94, type: 2}
     - target: {fileID: 3645937793812612991, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937794747041010, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_Text
+      value: Forest city
       objectReference: {fileID: 0}
     - target: {fileID: 3645937794747041020, guid: 67c968b5a680c954382aa03811c692d7,
         type: 3}
@@ -3929,6 +3994,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67c968b5a680c954382aa03811c692d7, type: 3}
+--- !u!114 &2067746652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3404116956659548357, guid: b5ef3e529d968fc4f96ffc5d2610390a,
+    type: 3}
+  m_PrefabInstance: {fileID: 414848001}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e91f7149c89dc44a866166bb0b94d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2113482667
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: C2ChangeHealthCare
-  m_EditorClassIdentifier: Assembly-CSharp::ScriptableCard
-  cardName: ChangeHealthcare
+  m_Script: {fileID: 11500000, guid: 79f44976a3a22124e812392c2574986b, type: 3}
+  m_Name: C4ChangeHealthCare 3
+  m_EditorClassIdentifier: 
+  cardName: City 3 Change Healthcare
   cardCost: 4000
-  cardFlavorText: Change health care of the 2nd  city
+  cardFlavorText: Improve the healthcare of City 1
   CardEffect: ChangeHealthCare
-  cardValue: 0
+  cardValue: 2
   NegativeValue: 0
-  affectedCity: 1
+  affectedCity: 3
   AddedBuilding: 
