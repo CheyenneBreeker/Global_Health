@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3404116956659548354}
   - component: {fileID: 3404116956659548357}
   - component: {fileID: 3404116956659548352}
+  - component: {fileID: 4171764346033243576}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -46,14 +47,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardDeck:
-  - {fileID: 11400000, guid: 401c6d628b945bb41b9ddb40da9616e3, type: 2}
-  - {fileID: 11400000, guid: f6af48e9773aac442a381794a656e613, type: 2}
-  - {fileID: 11400000, guid: 5bd7785b19dfa814f917da0fba2f7c12, type: 2}
-  - {fileID: 11400000, guid: 6f1f36d9bedd7394e9a7af5221b00a04, type: 2}
-  - {fileID: 11400000, guid: 86de415242e81b24fb51aa1d7f0cce15, type: 2}
-  - {fileID: 11400000, guid: 835f7d39b54eb334fb1d971ad12092b6, type: 2}
-  - {fileID: 11400000, guid: 87f1f025696fe5348a680af2240e02d6, type: 2}
-  - {fileID: 11400000, guid: 6b1116903fef8e44691c8435273ed51a, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &3404116956659548357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,3 +87,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20ec14d18c8e6614d81675954d34b443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4171764346033243576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404116956659548356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe88cedbb01b1414890d0fcbfbfa9107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausePanel: {fileID: 0}
