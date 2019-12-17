@@ -1,18 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void StartGame()
     {
-        
+        SceneManager.LoadScene("GameWorld");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ToggleOptionMenu()
     {
-        
+        Debug.Log("Toggle option menu.");
+    }
+
+    public void ToggleCredits()
+    {
+        Debug.Log("Toggle credits.");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

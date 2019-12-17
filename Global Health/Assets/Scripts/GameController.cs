@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        Debug.Log("GameController/GoToMainMenu() called.");
-        //TODO: SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
     }
 }
