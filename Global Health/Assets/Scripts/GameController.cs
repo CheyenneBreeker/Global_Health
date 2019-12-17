@@ -6,15 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public GameObject pausePanel;
-    // Start is called before the first frame update
 
-    private bool isCurrentlyPaused;
-    void Start()
-    {
-        isCurrentlyPaused = false;
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -25,7 +17,7 @@ public class GameController : MonoBehaviour
 
     public void TogglePause()
     {
-        if (isCurrentlyPaused)
+        if (pausePanel.activeInHierarchy)
         {
             pausePanel.SetActive(false);
             Time.timeScale = 1;
@@ -36,11 +28,9 @@ public class GameController : MonoBehaviour
             pausePanel.SetActive(true);
             Time.timeScale = 0;
         }
-
-        isCurrentlyPaused = !isCurrentlyPaused;
     }
 
-    private void GoToMainMenu()
+    public void GoToMainMenu()
     {
         Debug.Log("GameController/GoToMainMenu() called.");
         //TODO: SceneManager.LoadScene("MainMenu");
