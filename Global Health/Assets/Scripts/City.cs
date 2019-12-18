@@ -12,6 +12,8 @@ public class City : MonoBehaviour
     public int casesPrevented;
     public int cureSucces;
 
+    protected int score = 0;
+
     private void Start()
     {
         UpdateCityUI();
