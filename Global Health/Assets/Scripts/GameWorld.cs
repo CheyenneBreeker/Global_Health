@@ -62,6 +62,6 @@ public  class GameWorld : MonoBehaviour
     {
         playerMoney.text = "IMU: " + imu.ToString();
         worldPopulation.text = "World population: " + population.ToString();
-
+        PlayerPrefs.SetInt("Player population", population);
     }
 }
