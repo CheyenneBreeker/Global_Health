@@ -12,8 +12,9 @@ public class TurnManager : MonoBehaviour
     public CardController cardController;
 
     // UI elements.
-    public TurnCounter tCounter;
-    public Button tButton;
+    public TurnCounter turnCounter;
+    public Button turnButton;
+    public Text turnFeedback;
 
     public EventCardDeck eventCardDeck;
 
