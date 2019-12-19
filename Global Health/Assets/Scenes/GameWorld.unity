@@ -1165,8 +1165,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardController: {fileID: 2067746652}
-  tCounter: {fileID: 488053278}
-  tButton: {fileID: 489876443}
+  turnCounter: {fileID: 488053278}
+  turnButton: {fileID: 489876443}
+  turnFeedback: {fileID: 911085758}
   eventCardDeck: {fileID: 54982584}
 --- !u!4 &524962070
 Transform:
