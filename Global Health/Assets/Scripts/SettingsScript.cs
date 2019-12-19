@@ -1,18 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SettingsScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public AudioMixer effectsAudioMixer;
+    public AudioMixer ambientAudioMixer;
+
+    public void SetSFXVolume(float volume)
     {
-        
+        effectsAudioMixer.SetFloat("SFXVolume", volume);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetAmbientVolume(float volume)
     {
-        
+        ambientAudioMixer.SetFloat("AmbientVolume", volume);
+    }
+
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
     }
 }
