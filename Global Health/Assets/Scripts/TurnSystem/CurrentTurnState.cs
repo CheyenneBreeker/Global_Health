@@ -14,8 +14,8 @@ public class CurrentTurnState : IState
         Debug.Log("ENTERING CURRENT TURN STATE");
 
         // Increases turnCount value, updates the counter text and enables the NextTurn button.
-        owner.tCounter.IncreaseTurnCount();
-        owner.tButton.gameObject.SetActive(true);
+        owner.turnCounter.IncreaseTurnCount();
+        owner.turnButton.gameObject.SetActive(true);
 
         owner.cardController.GetCards();
     }
@@ -32,7 +32,7 @@ public class CurrentTurnState : IState
         Debug.Log("EXITING CURRENT TURN STATE");
 
         // Disables the NextTurn button when exiting the CurrentTurn state.
-        owner.tButton.gameObject.SetActive(false);
+        owner.turnButton.gameObject.SetActive(false);
         owner.cardController.LoseCards();
 
         owner.eventCardDeck.EventTrigger();
