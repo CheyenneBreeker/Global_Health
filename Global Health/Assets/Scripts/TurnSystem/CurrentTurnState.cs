@@ -13,6 +13,8 @@ public class CurrentTurnState : IState
     {
         Debug.Log("ENTERING CURRENT TURN STATE");
 
+        owner.StartCoroutine(owner.TurnFeedback("Turn Begins"));
+
         // Increases turnCount value, updates the counter text and enables the NextTurn button.
         owner.turnCounter.IncreaseTurnCount();
         owner.turnButton.gameObject.SetActive(true);
@@ -30,6 +32,8 @@ public class CurrentTurnState : IState
     public void Exit()
     {
         Debug.Log("EXITING CURRENT TURN STATE");
+
+        owner.StartCoroutine(owner.TurnFeedback("Turn Ended"));
 
         // Disables the NextTurn button when exiting the CurrentTurn state.
         owner.turnButton.gameObject.SetActive(false);

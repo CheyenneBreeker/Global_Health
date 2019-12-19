@@ -45,7 +45,14 @@ public class TurnManager : MonoBehaviour
             GameObject.Destroy(child.gameObject);
         }
         cardController.CardsPlayed = 0;
-        stateMachine.ChangeState(new CurrentTurnState(this));
-        
+        stateMachine.ChangeState(new CurrentTurnState(this));        
+    }
+
+    public IEnumerator TurnFeedback(string text)
+    {
+        turnFeedback.text = text;
+        turnFeedback.gameObject.GetComponent<Animator>().Play("TurnFeedback_Action");
+        yield return new WaitForSeconds(1.5f);
+        turnFeedback.gameObject.GetComponent<Animator>().Play("TurnFeedback_Idle");
     }
 }
