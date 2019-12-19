@@ -12,7 +12,9 @@ public class MainMenuController : MonoBehaviour
 
     void Start()
     {
+        //Initial values, this triggers the change method and defaults the scene to the main menu
         newMenuNumber = 0;
+        currentMenuNumber = 99;
     }
 
     void Update()
