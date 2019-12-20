@@ -46,14 +46,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardDeck:
-  - {fileID: 11400000, guid: 401c6d628b945bb41b9ddb40da9616e3, type: 2}
-  - {fileID: 11400000, guid: f6af48e9773aac442a381794a656e613, type: 2}
-  - {fileID: 11400000, guid: 5bd7785b19dfa814f917da0fba2f7c12, type: 2}
-  - {fileID: 11400000, guid: 6f1f36d9bedd7394e9a7af5221b00a04, type: 2}
-  - {fileID: 11400000, guid: 86de415242e81b24fb51aa1d7f0cce15, type: 2}
-  - {fileID: 11400000, guid: 835f7d39b54eb334fb1d971ad12092b6, type: 2}
-  - {fileID: 11400000, guid: 87f1f025696fe5348a680af2240e02d6, type: 2}
-  - {fileID: 11400000, guid: 6b1116903fef8e44691c8435273ed51a, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &3404116956659548357
 MonoBehaviour:
   m_ObjectHideFlags: 0
