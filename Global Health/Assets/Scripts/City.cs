@@ -12,6 +12,7 @@ public class City : MonoBehaviour
     public int casesPrevented;
     public int cureSucces;
     public Transform buildings;
+    int countBuilding;
 
     private void Start()
     {
@@ -33,6 +34,20 @@ public class City : MonoBehaviour
         UpdateCityUI();
     }
 
+    public void SendDeathrate()
+    {
+        GameWorld.Instance.NewDeathrate(deathrate);
+    }
+
+    public void UpdateDeathrate(int n_deathrate, bool substract)
+    {
+        if (substract)
+            deathrate -= n_deathrate;
+        else
+            deathrate += n_deathrate;
+
+        UpdateCityUI();
+    }
     public void UpdateHealthCare(int n_healthcare, bool substract)
     {
         if (substract)
@@ -46,15 +61,23 @@ public class City : MonoBehaviour
     public void ConstructBuilding(string buildingName)
     {
         Debug.Log("Building called");
+
         foreach (Transform building in buildings)
         {
+
             if (building.name == buildingName)
             {
                 Debug.Log("Building found");
                 building.gameObject.SetActive(true);
+                //countBuilding++;
             }
         }
+
+        countBuilding = buildings.transform.childCount;
+        PlayerPrefs.SetInt("buildings", countBuilding);
+        Debug.Log(countBuilding);
     }
+
     public void UpdateCityUI()
     {
         cityui.UpdateUI(currentPopulation,healthCare,deathrate,economy,casesPrevented,cureSucces);

@@ -7,28 +7,29 @@ using UnityEngine.SceneManagement;
 public class EndscreenScore : MonoBehaviour
 {
     public Text survivorsText;
+    public Text deathrateText;
+    public Text buildingsText;
 
     public int survivors;
+    public int deathrate;
+    public int buildings;
 
     // Start is called before the first frame update
     void Start()
     {
-        survivors = PlayerPrefs.GetInt("Player population");
+        survivors = PlayerPrefs.GetInt("population");
+        deathrate = PlayerPrefs.GetInt("deathrate");
+        buildings = PlayerPrefs.GetInt("buildings");
 
-        //scoreText.text = "Score: 0";
-        //casualtiesText.text = "Casualties: 0";
         survivorsText.text = "Survivors: " + survivors.ToString();
+        deathrateText.text = "Deathrate: " + deathrate.ToString();
+        buildingsText.text = "Buildings: " + buildings.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeScreenshot()
     {
-
-    }
-
-    public void RestartGame()
-    {
-        SceneManager.LoadScene("GameWorld");
+        Debug.Log("Screenshot taken");
+        ScreenCapture.CaptureScreenshot("Endscreen");
     }
 
     public void QuitGame()

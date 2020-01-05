@@ -7,6 +7,7 @@ public  class GameWorld : MonoBehaviour
 {
     public double imu;
     public int population;
+    public int deathrate;
     public City[] cities;
     public static GameWorld Instance { get; private set; }
     private void Awake()
@@ -19,6 +20,7 @@ public  class GameWorld : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         UpdatePopulation();
+        UpdateDeathrate();
         UpdateGameUI();
     }
     public void substractIMU(double units)
@@ -47,13 +49,37 @@ public  class GameWorld : MonoBehaviour
     public IEnumerator SendPopulationRequest()
     {
         population = 0;
+
         for (int i = 0; i < cities.Length; i++)
         {
             cities[i].SendPopulation();
         }
         yield return new WaitForSeconds(delayValue);
         worldPopulation.text = "World population: " + population.ToString();
+    }
 
+    public void UpdateDeathrate()
+    {
+        StartCoroutine(SendDeathrateRequest());
+    }
+
+    public void NewDeathrate(int newdeathrate)
+    {
+        deathrate += newdeathrate;
+    }
+
+    public float delayValueDeathrate;
+    public IEnumerator SendDeathrateRequest()
+    {
+        deathrate = 0;
+
+        for (int i = 0; i < cities.Length; i++)
+        {
+            cities[i].SendDeathrate();
+        }
+        yield return new WaitForSeconds(delayValueDeathrate);
+        Debug.Log(deathrate);
+        PlayerPrefs.SetInt("deathrate", deathrate);
     }
 
     public Text worldPopulation;
@@ -62,6 +88,7 @@ public  class GameWorld : MonoBehaviour
     {
         playerMoney.text = "IMU: " + imu.ToString();
         worldPopulation.text = "World population: " + population.ToString();
-        PlayerPrefs.SetInt("Player population", population);
+        Debug.Log(population);
+        PlayerPrefs.SetInt("population", population);
     }
 }
