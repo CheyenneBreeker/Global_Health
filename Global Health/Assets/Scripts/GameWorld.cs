@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public  class GameWorld : MonoBehaviour
+public class GameWorld : MonoBehaviour
 {
     public double imu;
     public int population;
     public City[] cities;
     public static GameWorld Instance { get; private set; }
-    private void Awake()
+    private void Start()
     {
         if (Instance != null)
         {
@@ -20,6 +20,28 @@ public  class GameWorld : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         UpdatePopulation();
         UpdateGameUI();
+    }
+
+    private void OnLevelWasLoaded(int levelNumber)
+    {
+        switch(levelNumber)
+        {
+            //Main Menu
+            case 0:
+            DestroyImmediate(gameObject);
+            break;
+
+            //Game Scene
+            case 1:
+            cities[0] = GameObject.Find("Sea city").GetComponent<City>();
+            cities[1] = GameObject.Find("River city").GetComponent<City>();
+            cities[2] = GameObject.Find("Mountain city").GetComponent<City>();
+            cities[3] = GameObject.Find("Forest city").GetComponent<City>();
+            break;
+
+            default:
+            break;
+        }
     }
     public void substractIMU(double units)
     {
