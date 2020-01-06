@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class EndscreenScore : MonoBehaviour
 {
+    public Text totalScoreText;
     public Text survivorsText;
     public Text deathrateText;
     public Text buildingsText;
@@ -14,16 +15,24 @@ public class EndscreenScore : MonoBehaviour
     public int deathrate;
     public int buildings;
 
+    public int multiplier = 4;
+
+    public int totalScore;
+
     // Start is called before the first frame update
     void Start()
     {
-        survivors = PlayerPrefs.GetInt("population");
-        deathrate = PlayerPrefs.GetInt("deathrate");
-        buildings = PlayerPrefs.GetInt("buildings");
+
+        //countBuilding = buildings.transform.childCount;
 
         survivorsText.text = "Survivors: " + survivors.ToString();
+
         deathrateText.text = "Deathrate: " + deathrate.ToString();
         buildingsText.text = "Buildings: " + buildings.ToString();
+
+        totalScore = survivors + buildings * multiplier - deathrate;
+
+        totalScoreText.text = "Total Score: " + totalScore.ToString();
     }
 
     public void TakeScreenshot()

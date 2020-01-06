@@ -79,7 +79,6 @@ public  class GameWorld : MonoBehaviour
         }
         yield return new WaitForSeconds(delayValueDeathrate);
         Debug.Log(deathrate);
-        PlayerPrefs.SetInt("deathrate", deathrate);
     }
 
     public Text worldPopulation;
@@ -89,6 +88,5 @@ public  class GameWorld : MonoBehaviour
         playerMoney.text = "IMU: " + imu.ToString();
         worldPopulation.text = "World population: " + population.ToString();
         Debug.Log(population);
-        PlayerPrefs.SetInt("population", population);
     }
 }
