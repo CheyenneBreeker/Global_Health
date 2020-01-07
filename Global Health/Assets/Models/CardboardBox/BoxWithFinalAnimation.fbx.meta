@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7a2f34dca83313e4bab5a11ac38a9040
+guid: ec55552335568ee4a900c99d7a9927e0
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
@@ -12,6 +12,12 @@ ModelImporter:
   - first:
       74: 6963960178384952303
     second: Armature|OpenBox
+  - first:
+      74: -8377423014403623126
+    second: Armature|PopIn
+  - first:
+      74: -3549762148445311846
+    second: Armature|Shake
   externalObjects: {}
   materials:
     importMaterials: 1
