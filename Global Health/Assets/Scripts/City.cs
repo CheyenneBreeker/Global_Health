@@ -12,6 +12,7 @@ public class City : MonoBehaviour
     public int casesPrevented;
     public int cureSucces;
     public Transform buildings;
+    public GameObject boxPrefab;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class City : MonoBehaviour
     {
         GameWorld.Instance.NewPopulation(currentPopulation);
     }
-    
+
     public void UpdatePopulation(int n_population, bool substract)
     {
         if (substract)
@@ -51,12 +52,13 @@ public class City : MonoBehaviour
             if (building.name == buildingName)
             {
                 Debug.Log("Building found");
+                Instantiate(boxPrefab, new Vector3(building.gameObject.transform.position.x, 0.6f, building.gameObject.transform.position.z), Quaternion.identity);
                 building.gameObject.SetActive(true);
             }
         }
     }
     public void UpdateCityUI()
     {
-        cityui.UpdateUI(currentPopulation,healthCare,deathrate,economy,casesPrevented,cureSucces);
+        cityui.UpdateUI(currentPopulation, healthCare, deathrate, economy, casesPrevented, cureSucces);
     }
 }
