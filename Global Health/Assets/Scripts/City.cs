@@ -48,6 +48,7 @@ public class City : MonoBehaviour
 
         UpdateCityUI();
     }
+
     public void UpdateHealthCare(int n_healthcare, bool substract)
     {
         if (substract)
@@ -69,13 +70,26 @@ public class City : MonoBehaviour
             {
                 Debug.Log("Building found");
                 building.gameObject.SetActive(true);
-                //countBuilding++;
+                countBuilding++;
             }
         }
 
-        countBuilding = buildings.transform.childCount;
-        PlayerPrefs.SetInt("buildings", countBuilding);
+        SendBuilding();
+    }
+
+
+    public void SendBuilding()
+    {
         Debug.Log(countBuilding);
+        GameWorld.Instance.NewBuilding(countBuilding);
+    }
+
+    public void UpdateBuilding(int n_building, bool substract)
+    {
+        if (substract)
+            countBuilding -= n_building;
+        else
+            countBuilding += n_building;
     }
 
     public void UpdateCityUI()

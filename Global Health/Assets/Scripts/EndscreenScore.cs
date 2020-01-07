@@ -21,13 +21,14 @@ public class EndscreenScore : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-
-        //countBuilding = buildings.transform.childCount;
-
+    { 
+        survivors = GameWorld.Instance.population;
         survivorsText.text = "Survivors: " + survivors.ToString();
 
+        deathrate = GameWorld.Instance.deathrate;
         deathrateText.text = "Deathrate: " + deathrate.ToString();
+
+        buildings = GameWorld.Instance.building;
         buildingsText.text = "Buildings: " + buildings.ToString();
 
         totalScore = survivors + buildings * multiplier - deathrate;

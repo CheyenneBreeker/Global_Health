@@ -355,6 +355,7 @@ MonoBehaviour:
   imu: 50000000
   population: 0
   deathrate: 0
+  building: 0
   cities:
   - {fileID: 121782396}
   - {fileID: 287993141}
@@ -362,6 +363,7 @@ MonoBehaviour:
   - {fileID: 988710597}
   delayValue: 0.5
   delayValueDeathrate: 0
+  delayValueBuilding: 0
   worldPopulation: {fileID: 1839667999}
   playerMoney: {fileID: 719660173}
 --- !u!4 &186816730 stripped

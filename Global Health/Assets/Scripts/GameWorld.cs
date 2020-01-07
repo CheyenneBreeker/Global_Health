@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public  class GameWorld : MonoBehaviour
+public class GameWorld : MonoBehaviour
 {
     public double imu;
     public int population;
     public int deathrate;
+    public int building;
     public City[] cities;
     public static GameWorld Instance { get; private set; }
     private void Awake()
@@ -21,8 +23,10 @@ public  class GameWorld : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         UpdatePopulation();
         UpdateDeathrate();
-        UpdateGameUI();
+        UpdateBuilding();
+        UpdateGameUI();     
     }
+
     public void substractIMU(double units)
     {
         imu -= units;
@@ -78,7 +82,31 @@ public  class GameWorld : MonoBehaviour
             cities[i].SendDeathrate();
         }
         yield return new WaitForSeconds(delayValueDeathrate);
-        Debug.Log(deathrate);
+        Debug.Log("death: " + deathrate);
+    }
+
+
+    public void UpdateBuilding()
+    {
+        StartCoroutine(SendBuildingRequest());
+    }
+
+    public void NewBuilding(int newbuilding)
+    {
+        building += newbuilding;
+    }
+
+    public float delayValueBuilding;
+    public IEnumerator SendBuildingRequest()
+    {
+        building = 0;
+
+        for (int i = 0; i < cities.Length; i++)
+        {
+            cities[i].SendBuilding();
+        }
+        yield return new WaitForSeconds(delayValueBuilding);
+        Debug.Log("buildings: " + building);
     }
 
     public Text worldPopulation;
@@ -87,6 +115,19 @@ public  class GameWorld : MonoBehaviour
     {
         playerMoney.text = "IMU: " + imu.ToString();
         worldPopulation.text = "World population: " + population.ToString();
-        Debug.Log(population);
+        Debug.Log("pop: " + population);
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GoToScene();
+        }
+    }
+
+    public void GoToScene()
+    {
+        SceneManager.LoadScene("Endscreen");
     }
 }
