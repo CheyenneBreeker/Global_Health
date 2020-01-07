@@ -16,6 +16,8 @@ public class EventCardDescription : MonoBehaviour
     public EventCardDeck test;
     public EventCardEffects effect;
 
+    public Animator cardAni;
+
     public void Start()
     {
         gameObject.SetActive(false);
