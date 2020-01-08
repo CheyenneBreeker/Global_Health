@@ -12,7 +12,7 @@ public class City : MonoBehaviour
     public int casesPrevented;
     public int cureSucces;
     public Transform buildings;
-    int countBuilding;
+    public int countBuilding;
 
     private void Start()
     {

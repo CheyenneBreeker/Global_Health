@@ -24,7 +24,8 @@ public class GameWorld : MonoBehaviour
         UpdatePopulation();
         UpdateDeathrate();
         UpdateBuilding();
-        UpdateGameUI();     
+        UpdateGameUI();
+        //SendCityDetails();
     }
 
     public void substractIMU(double units)
@@ -130,4 +131,21 @@ public class GameWorld : MonoBehaviour
     {
         SceneManager.LoadScene("Endscreen");
     }
+
+    //public int pop;
+    //public int death;
+    //public int buildings;
+
+    //public void SendCityDetails()
+    //{
+    //    for (int i = 0; i < cities.Length; i++)
+    //    {
+    //        pop = cities[i].currentPopulation;
+    //        death = cities[i].deathrate;
+    //        buildings = cities[i].countBuilding;
+    //        Debug.Log(pop);
+    //        Debug.Log(death);
+    //        Debug.Log(buildings);
+    //    }
+    //}
 }

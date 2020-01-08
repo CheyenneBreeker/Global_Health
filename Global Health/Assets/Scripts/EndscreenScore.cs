@@ -19,6 +19,10 @@ public class EndscreenScore : MonoBehaviour
 
     public int totalScore;
 
+    public Text[] pop;
+    public Text[] death;
+    public Text[] building;
+
     // Start is called before the first frame update
     void Start()
     { 
@@ -34,6 +38,18 @@ public class EndscreenScore : MonoBehaviour
         totalScore = survivors + buildings * multiplier - deathrate;
 
         totalScoreText.text = "Total Score: " + totalScore.ToString();
+
+        for (int i = 0; i < GameWorld.Instance.cities.Length; i++)
+        {
+            Debug.Log(GameWorld.Instance.cities[i].currentPopulation);
+            Debug.Log(GameWorld.Instance.cities[i].deathrate);
+            Debug.Log(GameWorld.Instance.cities[i].countBuilding);
+
+            pop[i].text = GameWorld.Instance.cities[i].currentPopulation.ToString();
+            death[i].text = GameWorld.Instance.cities[i].deathrate.ToString();
+            building[i].text = GameWorld.Instance.cities[i].countBuilding.ToString();
+        }
+
     }
 
     public void TakeScreenshot()
