@@ -13,7 +13,14 @@ public class CurrentTurnState : IState
     {
         Debug.Log("ENTERING CURRENT TURN STATE");
 
-        owner.StartCoroutine(owner.TurnFeedback("Turn Begins"));
+        if (owner.turnCounter.maxTurnCount - owner.turnCounter.turnCount <= 5)
+        {
+            owner.StartCoroutine(owner.TurnFeedback(owner.turnCounter.maxTurnCount - owner.turnCounter.turnCount + " Turns Remaining"));
+        }
+        else
+        {
+            owner.StartCoroutine(owner.TurnFeedback("Turn " + (owner.turnCounter.turnCount + 1)));
+        }
 
         // Increases turnCount value, updates the counter text and enables the NextTurn button.
         owner.turnCounter.IncreaseTurnCount();
