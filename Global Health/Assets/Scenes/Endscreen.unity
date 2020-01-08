@@ -478,7 +478,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Deathrate
+  m_Text: 'Deathrate:
 
 
 '
@@ -2308,7 +2308,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Survivors
+  m_Text: 'Survivors:
 
 '
 --- !u!1 &1977843461
@@ -2513,6 +2513,8 @@ MonoBehaviour:
   - {fileID: 1235688309}
   - {fileID: 1437460582}
   - {fileID: 1561293142}
+  death: []
+  building: []
 --- !u!4 &2088051672
 Transform:
   m_ObjectHideFlags: 0
