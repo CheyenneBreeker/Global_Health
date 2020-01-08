@@ -11,13 +11,13 @@ public class EndscreenScore : MonoBehaviour
     public Text deathrateText;
     public Text buildingsText;
 
-    public int survivors;
-    public int deathrate;
-    public int buildings;
+    int survivors;
+    int deathrate;
+    int buildings;
 
     public int multiplier = 4;
 
-    public int totalScore;
+    int totalScore;
 
     public Text[] pop;
     public Text[] death;
@@ -56,14 +56,14 @@ public class EndscreenScore : MonoBehaviour
     public void TakeScreenshot()
     {
         Debug.Log("Screenshot taken");
-        ScreenCapture.CaptureScreenshot("Endscreen");
         screenshotButton.PlayOneShot(screenshotButton.clip, 1.0f);
+        ScreenCapture.CaptureScreenshot("Endscreen");
     }
 
     public void QuitGame()
     {
         Debug.Log("Quitting game...");
-        Application.Quit();
         quitButton.PlayOneShot(quitButton.clip, 1.0f);
+        Application.Quit();
     }
 }

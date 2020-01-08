@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class TurnCounter : MonoBehaviour
 {
     // Variables.
-    int turnCount;
+    public int turnCount;
     Text turnCountText;
 
     // Inits text object and text value.
@@ -26,7 +26,6 @@ public class TurnCounter : MonoBehaviour
 
         if (turnCount > 30)
         {
-            SceneManager.LoadScene("Endscreen");
             turnCountText.enabled = false;
         }
     }
