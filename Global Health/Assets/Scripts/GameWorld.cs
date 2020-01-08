@@ -31,14 +31,6 @@ public class GameWorld : MonoBehaviour
             DestroyImmediate(gameObject);
             break;
 
-            //Game Scene
-            case 1:
-            cities[0] = GameObject.Find("Sea city").GetComponent<City>();
-            cities[1] = GameObject.Find("River city").GetComponent<City>();
-            cities[2] = GameObject.Find("Mountain city").GetComponent<City>();
-            cities[3] = GameObject.Find("Forest city").GetComponent<City>();
-            break;
-
             default:
             break;
         }
