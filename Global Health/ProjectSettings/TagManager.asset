@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - EventDeck
+  - City
+  - Music
   layers:
   - Default
   - TransparentFX

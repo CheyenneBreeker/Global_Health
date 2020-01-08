@@ -18,6 +18,8 @@ public class EventCardDescription : MonoBehaviour
 
     public Animator cardAni;
 
+    public AudioSource btnClicked;
+
     public void Start()
     {
         gameObject.SetActive(false);
@@ -51,22 +53,26 @@ public class EventCardDescription : MonoBehaviour
 
     public void OnButtonClick1()
     {
+        btnClicked.PlayOneShot(btnClicked.clip, 1.0f);
         SetButtonsNonActive();
     }
 
     public void OnButtonClick2()
     {
+        btnClicked.PlayOneShot(btnClicked.clip, 1.0f);
         SetButtonsNonActive();
         effect.CardEffect(card._name);
     }
 
     public void OnButtonClick3()
     {
+        btnClicked.PlayOneShot(btnClicked.clip, 1.0f);
         SetButtonsNonActive();
     }
 
     public void OnButtonClick4()
     {
+        btnClicked.PlayOneShot(btnClicked.clip, 1.0f);
         SetButtonsNonActive();
     }
 

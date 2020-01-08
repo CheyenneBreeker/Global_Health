@@ -17,6 +17,9 @@ public class TurnManager : MonoBehaviour
 
     public EventCardDeck eventCardDeck;
 
+    public AudioSource beginTurn;
+    public AudioSource nextTurn;
+
     // Sets the state to enter at the start of the game.
     private void Start()
     {
@@ -32,12 +35,14 @@ public class TurnManager : MonoBehaviour
     // Method to go to the NextTurnState.
     public void NextTurn()
     {
+        nextTurn.PlayOneShot(nextTurn.clip, 1.0f);
         stateMachine.ChangeState(new NextTurnState(this));
     }
 
     // Method to go to the CurrentTurnState.
     public void BeginTurn()
     {
+        beginTurn.PlayOneShot(beginTurn.clip, 1.0f);
         //remove cards on canvas
         foreach (Transform child in cardController.CardContainer.transform)
         {

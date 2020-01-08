@@ -23,6 +23,9 @@ public class EndscreenScore : MonoBehaviour
     public Text[] death;
     public Text[] building;
 
+    public AudioSource screenshotButton;
+    public AudioSource quitButton;
+
     // Start is called before the first frame update
     void Start()
     { 
@@ -47,17 +50,20 @@ public class EndscreenScore : MonoBehaviour
         }
 
         Destroy(GameObject.Find("GameWorldCanvas"));
+        GameObject.FindGameObjectWithTag("Music").GetComponent<SoundManager>().PlayMusic();
     }
 
     public void TakeScreenshot()
     {
         Debug.Log("Screenshot taken");
         ScreenCapture.CaptureScreenshot("Endscreen");
+        screenshotButton.PlayOneShot(screenshotButton.clip, 1.0f);
     }
 
     public void QuitGame()
     {
         Debug.Log("Quitting game...");
         Application.Quit();
+        quitButton.PlayOneShot(quitButton.clip, 1.0f);
     }
 }

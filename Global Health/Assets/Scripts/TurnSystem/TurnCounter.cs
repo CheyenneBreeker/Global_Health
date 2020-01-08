@@ -20,6 +20,7 @@ public class TurnCounter : MonoBehaviour
     // Method to increase the turnCount and updates text value afterwards.
     public void IncreaseTurnCount()
     {
+
         turnCount++;
         turnCountText.text = "Week: " + turnCount;
 
