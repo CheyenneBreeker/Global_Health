@@ -17,6 +17,13 @@ public class TurnCounter : MonoBehaviour
         turnCountText.text = "Week: " + turnCount;
     }
 
+    public void Update()
+    {
+        if (turnCount > 30)
+        {
+            SceneManager.LoadScene("Endscreen");
+        }
+    }
     // Method to increase the turnCount and updates text value afterwards.
     public void IncreaseTurnCount()
     {
@@ -25,7 +32,7 @@ public class TurnCounter : MonoBehaviour
 
         if (turnCount > 30)
         {
-            SceneManager.LoadScene("Endscreen");
+            turnCountText.enabled = false;
         }
     }
 }
