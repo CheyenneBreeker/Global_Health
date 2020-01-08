@@ -16,6 +16,8 @@ public class EventCardDescription : MonoBehaviour
     public EventCardDeck test;
     public EventCardEffects effect;
 
+    public Animator cardAni;
+
     public void Start()
     {
         gameObject.SetActive(false);
@@ -35,6 +37,8 @@ public class EventCardDescription : MonoBehaviour
         _description.text = c._description;
 
         gameObject.SetActive(true);
+
+        StartCoroutine(CardAppear());
 
         for(int i = 0; i < c._choices; i++)
         {
@@ -68,6 +72,21 @@ public class EventCardDescription : MonoBehaviour
 
     public void SetButtonsNonActive()
     {
+        StartCoroutine(CardDisappear());
+    }
+
+    private IEnumerator CardAppear()
+    {
+        cardAni.Play("EventCard_Appear");
+        yield return new WaitForSeconds(2.0f);
+        cardAni.Play("EventCard_Idle2");
+    }
+
+    private IEnumerator CardDisappear()
+    {
+        cardAni.Play("EventCard_Disappear");
+        yield return new WaitForSeconds(1.333f);
+        cardAni.Play("EventCard_Idle");
         choice1.gameObject.SetActive(false);
         choice2.gameObject.SetActive(false);
         choice3.gameObject.SetActive(false);
