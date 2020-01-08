@@ -23,7 +23,7 @@ public class CurrentTurnState : IState
     // Method which activates when the Enter method has been run through.
     public void Execute()
     {
-        Debug.Log("UPDATING CURRENT TURN STATE");
+        
     }
 
     // Method which activates when the state is exited.

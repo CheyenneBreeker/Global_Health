@@ -17,8 +17,6 @@ public class NextTurnState : IState
     // Method which activates when the Enter method has been run through.
     public void Execute()
     {
-        Debug.Log("UPDATING NEXT TURN STATE");
-
         // Temporary way to return to CurrentTurnState
         if (Input.GetKeyDown(KeyCode.Space))
         {

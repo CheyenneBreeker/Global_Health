@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Test versie
-//Word later vervangen door game controller
 
 public class CardController : MonoBehaviour
 {
@@ -14,6 +12,7 @@ public class CardController : MonoBehaviour
     public List<ScriptableCard> PlayerDeck;
     private List<ScriptableCard> cardDeck;
     public List<GameObject> CardsInHand;
+    public  List<ScriptableCard> UsedCards;
     public GameObject selectedCard;
     public int CardsPlayed;
     public int MaxCardsPlayed = 3;
@@ -68,9 +67,9 @@ public class CardController : MonoBehaviour
         cardvariables[1] = PlayedCard.cardValue;
         cardvariables[2] = PlayedCard.NegativeValue;
         cardvariables[3] = PlayedCard.AddedBuilding;
-        //play effects in gameworld
         this.SendMessage(PlayedCard.CardEffect.ToString(), cardvariables, SendMessageOptions.RequireReceiver);
         GameWorld.Instance.substractIMU(PlayedCard.cardCost);
+        UsedCards.Add(PlayedCard);
         PlayerDeck.Remove(PlayedCard);
         CardsPlayed++;
     }
