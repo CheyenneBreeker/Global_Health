@@ -20,3 +20,4 @@ MonoBehaviour:
   NegativeValue: 0
   affectedCity: 3
   AddedBuilding: Hospital
+  TurnCountdown: 3
