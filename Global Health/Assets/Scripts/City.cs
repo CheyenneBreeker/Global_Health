@@ -51,10 +51,11 @@ public class City : MonoBehaviour
             if (building.name == buildingName)
             {
                 Debug.Log("Building found");
-                //building.gameObject.SetActive(true);
-
-                building.gameObject.GetComponent<BuildingConstruction>().Turncountdown = BuildTime;
-                building.gameObject.GetComponent<BuildingConstruction>().CountdownStarted = true;
+                if (building.gameObject.GetComponent<BuildingConstruction>().CountdownStarted == false)
+                {
+                    building.gameObject.GetComponent<BuildingConstruction>().Turncountdown = BuildTime;
+                    building.gameObject.GetComponent<BuildingConstruction>().CountdownStarted = true;
+                }
             }
         }
     }
