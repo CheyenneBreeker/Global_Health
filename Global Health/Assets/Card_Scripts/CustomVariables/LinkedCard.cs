@@ -19,7 +19,7 @@ public class LinkedCard : MonoBehaviour
         if (cardController.CardsPlayed < cardController.MaxCardsPlayed)
         {
             if (cardController.selectedCard == gameObject)
-        {
+            {
                 cardController.PlayCard(linkedCard);
                 Object.Destroy(this.gameObject);
             }
@@ -39,10 +39,12 @@ public class LinkedCard : MonoBehaviour
     {
         if (cardController.selectedCard == gameObject)
         {
+            LeanTween.moveY(gameObject, 40 + 30, 0.25f);
             gameObject.GetComponent<Image>().color = new Color(255, 0, 0);
         }
         else
         {
+            LeanTween.moveY(gameObject, 40, 0.25f);
             gameObject.GetComponent<Image>().color = new Color(255, 255, 255);
         }
     }
