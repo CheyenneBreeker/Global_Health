@@ -45,6 +45,8 @@ public class EndscreenScore : MonoBehaviour
             death[i].text = "Deathrate: " + GameWorld.Instance.cities[i].deathrate.ToString();
             building[i].text = "Buildings: " + GameWorld.Instance.cities[i].countBuilding.ToString();
         }
+
+        Destroy(GameObject.Find("GameWorldCanvas"));
     }
 
     public void TakeScreenshot()
