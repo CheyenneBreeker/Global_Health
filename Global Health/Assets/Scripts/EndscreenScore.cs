@@ -27,13 +27,13 @@ public class EndscreenScore : MonoBehaviour
     void Start()
     { 
         survivors = GameWorld.Instance.population;
-        survivorsText.text = "Survivors: " + survivors.ToString();
+        survivorsText.text = "Total Survivors: " + survivors.ToString();
 
         deathrate = GameWorld.Instance.deathrate;
-        deathrateText.text = "Deathrate: " + deathrate.ToString();
+        deathrateText.text = "Total Deathrate: " + deathrate.ToString();
 
         buildings = GameWorld.Instance.building;
-        buildingsText.text = "Buildings: " + buildings.ToString();
+        buildingsText.text = "Total Buildings: " + buildings.ToString();
 
         totalScore = survivors + buildings * multiplier - deathrate;
 
@@ -41,15 +41,10 @@ public class EndscreenScore : MonoBehaviour
 
         for (int i = 0; i < GameWorld.Instance.cities.Length; i++)
         {
-            Debug.Log(GameWorld.Instance.cities[i].currentPopulation);
-            Debug.Log(GameWorld.Instance.cities[i].deathrate);
-            Debug.Log(GameWorld.Instance.cities[i].countBuilding);
-
-            pop[i].text = GameWorld.Instance.cities[i].currentPopulation.ToString();
-            death[i].text = GameWorld.Instance.cities[i].deathrate.ToString();
-            building[i].text = GameWorld.Instance.cities[i].countBuilding.ToString();
+            pop[i].text = "Survivors: " + GameWorld.Instance.cities[i].currentPopulation.ToString();
+            death[i].text = "Deathrate: " + GameWorld.Instance.cities[i].deathrate.ToString();
+            building[i].text = "Buildings: " + GameWorld.Instance.cities[i].countBuilding.ToString();
         }
-
     }
 
     public void TakeScreenshot()

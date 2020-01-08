@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TurnCounter : MonoBehaviour
 {
@@ -21,5 +22,10 @@ public class TurnCounter : MonoBehaviour
     {
         turnCount++;
         turnCountText.text = "Week: " + turnCount;
+
+        if (turnCount > 30)
+        {
+            SceneManager.LoadScene("Endscreen");
+        }
     }
 }

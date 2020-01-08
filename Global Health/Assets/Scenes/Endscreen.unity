@@ -2513,8 +2513,16 @@ MonoBehaviour:
   - {fileID: 1235688309}
   - {fileID: 1437460582}
   - {fileID: 1561293142}
-  death: []
-  building: []
+  death:
+  - {fileID: 194439617}
+  - {fileID: 1030156547}
+  - {fileID: 456283689}
+  - {fileID: 1535047320}
+  building:
+  - {fileID: 1479839118}
+  - {fileID: 38085760}
+  - {fileID: 701026959}
+  - {fileID: 706122866}
 --- !u!4 &2088051672
 Transform:
   m_ObjectHideFlags: 0
