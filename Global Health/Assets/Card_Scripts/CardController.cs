@@ -42,7 +42,7 @@ public class CardController : MonoBehaviour
 
     private void DisplayCards(List<ScriptableCard> PlayerDeck)
     {
-        float spawnPosition = Screen.width/4;
+        float spawnPosition = Screen.width/3;
         foreach (var Card in PlayerDeck)
         {
             GameObject playingCard = CardUI;
@@ -52,11 +52,12 @@ public class CardController : MonoBehaviour
             playingCard.transform.Find("CardSummary").GetComponent<Text>().text = Card.cardFlavorText.ToString();
             playingCard.GetComponent<LinkedCard>().linkedCard = Card ;
 
-            GameObject NewCard = Instantiate(playingCard, new Vector3(spawnPosition, CardContainer.transform.position.y + playingCard.GetComponent<RectTransform>().rect.height / 2, CardContainer.transform.position.z),Quaternion.identity);
+            GameObject NewCard = Instantiate(playingCard, new Vector3(Screen.width, CardContainer.transform.position.y + playingCard.GetComponent<RectTransform>().rect.height / 2, CardContainer.transform.position.z),Quaternion.identity);
+            LeanTween.moveX(NewCard, spawnPosition, 1f).setEaseOutCubic();
+
             NewCard.transform.parent = CardContainer.transform;
             spawnPosition += NewCard.GetComponent<RectTransform>().rect.width;
             CardsInHand.Add(NewCard);
-
         }
     }
 
