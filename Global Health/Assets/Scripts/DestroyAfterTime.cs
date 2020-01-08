@@ -6,6 +6,7 @@ using UnityEngine;
 public class DestroyAfterTime : MonoBehaviour
 {
     public int secondsBeforeDestruction = 4;
+    public bool timerActive = false;
 
     private float currentTimer;
 
@@ -16,13 +17,19 @@ public class DestroyAfterTime : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (currentTimer > 0)
+        if (currentTimer > 0 && timerActive)
         {
             currentTimer--;
         }
-        else
+        
+        if(currentTimer <= 0)
         {
             Destroy(gameObject);
         }
+    }
+
+    public void ActivateTimer()
+    {
+        timerActive = true;
     }
 }

@@ -410,6 +410,8 @@ GameObject:
   m_Component:
   - component: {fileID: 870685625667905661}
   - component: {fileID: 7106478138257687815}
+  - component: {fileID: 525314816706496116}
+  - component: {fileID: 3516438187364382715}
   m_Layer: 0
   m_Name: BoxWithAnimation1.2
   m_TagString: Untagged
@@ -452,6 +454,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &525314816706496116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4201315492426652270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aca60063cc9cfbc4c898e8bb41f0f0a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shouldLoop: 0
+--- !u!114 &3516438187364382715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4201315492426652270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c5b8655a87ec649b633a563cbed5f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsBeforeDestruction: 4
+  timerActive: 0
 --- !u!1 &5234436653095210235
 GameObject:
   m_ObjectHideFlags: 0
