@@ -9,6 +9,8 @@ public class LinkedCard : MonoBehaviour
     public CardController cardController;
 
     private bool cardIsBeingPlayed;
+    private float amountSelectedCardRaisedVertically = 30;
+    private GameObject currentlySelectedCard;
 
     private void Start()
     {
@@ -36,26 +38,33 @@ public class LinkedCard : MonoBehaviour
 
     IEnumerator ActivateCard()
     {
+        // Start the animation of the card
         cardIsBeingPlayed = true;
         cardController.selectedCard = null;
-        LeanTween.moveY(this.gameObject, gameObject.transform.position.y - 150, 0.9f).setEaseInOutCubic();
+        LeanTween.moveY(this.gameObject, gameObject.transform.position.y - 150, 0.8f).setEaseInOutCubic();
 
         yield return new WaitForSeconds(1);
 
+        // When out of view, play the effect of the card and remove it from the deck.
         cardController.PlayCard(linkedCard);
         Object.Destroy(this.gameObject);
     }
 
-    public void Update()
+    public void FixedUpdate()
     {
-        if (cardController.selectedCard == gameObject)
+        currentlySelectedCard = cardController.selectedCard;
+
+        // Make the card slightly hover when it's selected
+        if (currentlySelectedCard == gameObject)
         {
-            LeanTween.moveY(gameObject, 40 + 30, 0.25f);
+            LeanTween.moveY(gameObject, 40 + amountSelectedCardRaisedVertically, 0.2f);
             gameObject.GetComponent<Image>().color = new Color(255, 0, 0);
         }
-        else if(!cardIsBeingPlayed)
+
+        // Return the card to its original position when selection gets removed (unless it is currently being played)
+        else if (!cardIsBeingPlayed)
         {
-            LeanTween.moveY(gameObject, 40, 0.25f);
+            LeanTween.moveY(gameObject, 40, 0.2f);
             gameObject.GetComponent<Image>().color = new Color(255, 255, 255);
         }
     }
