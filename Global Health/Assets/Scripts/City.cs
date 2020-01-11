@@ -7,8 +7,9 @@ public class City : MonoBehaviour
     public CityUI cityui;
     public int currentPopulation;
     public int healthCare;
-    public int deathrate;
-    public string economy;
+    public int economy;
+    public int schooling;
+    public int deathrate; 
     public int casesPrevented;
     public int cureSucces;
     public Transform buildings;
