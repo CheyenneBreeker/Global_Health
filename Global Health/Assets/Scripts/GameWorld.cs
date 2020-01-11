@@ -70,6 +70,14 @@ public class GameWorld : MonoBehaviour
 
     }
 
+    public void UpdateCities()
+    {
+        for (int i = 0; i < cities.Length; i++)
+        {
+            cities[i].GetNewData();
+        }
+    }
+
     public Text worldPopulation;
     public Text playerMoney;
     public void UpdateGameUI()

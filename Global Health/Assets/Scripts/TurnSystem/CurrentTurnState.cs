@@ -16,7 +16,6 @@ public class CurrentTurnState : IState
         // Increases turnCount value, updates the counter text and enables the NextTurn button.
         owner.tCounter.IncreaseTurnCount();
         owner.tButton.gameObject.SetActive(true);
-
         owner.cardController.GetCards();
     }
 
@@ -34,7 +33,7 @@ public class CurrentTurnState : IState
         // Disables the NextTurn button when exiting the CurrentTurn state.
         owner.tButton.gameObject.SetActive(false);
         owner.cardController.LoseCards();
-
+        GameWorld.Instance.UpdateCities();
         owner.eventCardDeck.EventTrigger();
     }
 }
