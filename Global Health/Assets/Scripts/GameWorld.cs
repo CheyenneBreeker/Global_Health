@@ -25,8 +25,6 @@ public class GameWorld : MonoBehaviour
         UpdateDeathrate();
         UpdateBuilding();
         UpdateGameUI();
-
-        GameObject.FindGameObjectWithTag("Music").GetComponent<SoundManager>().PlayMusic();
     }
 
     private void OnLevelWasLoaded(int levelNumber)

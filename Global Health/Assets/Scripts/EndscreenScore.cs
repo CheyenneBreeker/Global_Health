@@ -23,8 +23,8 @@ public class EndscreenScore : MonoBehaviour
     public Text[] death;
     public Text[] building;
 
-    public AudioSource screenshotButton;
-    public AudioSource quitButton;
+    [SerializeField]
+    private AudioClip buttonClicksSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -50,20 +50,19 @@ public class EndscreenScore : MonoBehaviour
         }
 
         Destroy(GameObject.Find("GameWorldCanvas"));
-        GameObject.FindGameObjectWithTag("Music").GetComponent<SoundManager>().PlayMusic();
     }
 
     public void TakeScreenshot()
     {
         Debug.Log("Screenshot taken");
-        screenshotButton.PlayOneShot(screenshotButton.clip, 1.0f);
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         ScreenCapture.CaptureScreenshot("Endscreen");
     }
 
     public void QuitGame()
     {
         Debug.Log("Quitting game...");
-        quitButton.PlayOneShot(quitButton.clip, 1.0f);
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         Application.Quit();
     }
 }

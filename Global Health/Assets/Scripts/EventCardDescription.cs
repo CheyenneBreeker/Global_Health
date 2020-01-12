@@ -18,7 +18,8 @@ public class EventCardDescription : MonoBehaviour
 
     public Animator cardAni;
 
-    public AudioSource btnClicked;
+    [SerializeField]
+    private AudioClip buttonClicksSFX;
 
     public void Start()
     {
@@ -53,26 +54,26 @@ public class EventCardDescription : MonoBehaviour
 
     public void OnButtonClick1()
     {
-        btnClicked.PlayOneShot(btnClicked.clip, 1.0f);
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         SetButtonsNonActive();
     }
 
     public void OnButtonClick2()
     {
-        btnClicked.PlayOneShot(btnClicked.clip, 1.0f);
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         SetButtonsNonActive();
         effect.CardEffect(card._name);
     }
 
     public void OnButtonClick3()
     {
-        btnClicked.PlayOneShot(btnClicked.clip, 1.0f);
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         SetButtonsNonActive();
     }
 
     public void OnButtonClick4()
     {
-        btnClicked.PlayOneShot(btnClicked.clip, 1.0f);
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         SetButtonsNonActive();
     }
 

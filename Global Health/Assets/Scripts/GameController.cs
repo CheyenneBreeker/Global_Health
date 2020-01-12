@@ -7,9 +7,8 @@ public class GameController : MonoBehaviour
 {
     public GameObject pausePanel;
 
-    public AudioSource togglePause;
-
-    public AudioSource goToMenu;
+    [SerializeField]
+    private AudioClip buttonClicksSFX;
 
     void Update()
     {
@@ -21,8 +20,8 @@ public class GameController : MonoBehaviour
 
     public void TogglePause()
     {
-        // togglePause button sound
-        togglePause.PlayOneShot(togglePause.clip, 1.0f);
+        // Pause button sound
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
 
         if (pausePanel.activeInHierarchy)
         {
@@ -39,8 +38,8 @@ public class GameController : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        // goToMenu button sound
-        goToMenu.PlayOneShot(goToMenu.clip, 1.0f);
+        // Menu button sound
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
 
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");

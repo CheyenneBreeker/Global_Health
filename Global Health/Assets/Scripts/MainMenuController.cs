@@ -10,15 +10,24 @@ public class MainMenuController : MonoBehaviour
     private int currentMenuNumber;
     private int newMenuNumber;
 
-    public AudioSource startGame;
-    public AudioSource quitGame;
+    [SerializeField]
+    private AudioClip buttonClicksSFX;
+    [SerializeField]
+    private AudioClip music1;
+
+    [SerializeField]
+    private AudioClip music2;
+
+    //public AudioSource startGame;
+    //public AudioSource quitGame;
 
     void Start()
     {
         //Initial values, this triggers the change method and defaults the scene to the main menu
         newMenuNumber = 0;
         currentMenuNumber = 99;
-        GameObject.FindGameObjectWithTag("Music").GetComponent<SoundManager>().PlayMusic();
+        //GameObject.FindGameObjectWithTag("Music").GetComponent<SoundManager>().PlayMusic();
+        AudioManager.Instance.PlayMusic(music1);
     }
 
     void Update()
@@ -50,36 +59,20 @@ public class MainMenuController : MonoBehaviour
     //Set the new menu number (called by buttons)
     public void SwitchMenuNumber(int menuNumber)
     {
-        startGame.PlayOneShot(startGame.clip, 1.0f);
+        //startGame.PlayOneShot(startGame.clip, 1.0f);
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         newMenuNumber = menuNumber;
     }
 
     public void StartGame()
     {
-        StartCoroutine(ChangeScene());
-    }
-
-    private IEnumerator ChangeScene()
-    {
-        float duration = startGame.clip.length;
-        startGame.PlayOneShot(startGame.clip, duration);
-
-        //load the scene asynchrounously, it's important you set allowsceneactivation to false
-        //in order to wait for the audioclip to finish playing
-        AsyncOperation sceneLoading = SceneManager.LoadSceneAsync("GameWorld");
-        sceneLoading.allowSceneActivation = false;
-
-        //wait for the audioclip to end
-        yield return new WaitForSeconds(duration);
-        //wait for the scene to finish loading (it will always stop at 0.9 when allowSceneActivation is false
-        while (sceneLoading.progress < 0.9f) yield return null;
-        //allow the scene to load
-        sceneLoading.allowSceneActivation = true;
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
+        SceneManager.LoadScene("GameWorld");
     }
 
     public void QuitGame()
     {
-        quitGame.PlayOneShot(quitGame.clip, 1.0f);
+        //quitGame.PlayOneShot(quitGame.clip, 1.0f);
         Application.Quit();
     }
 }
