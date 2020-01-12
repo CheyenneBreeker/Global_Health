@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoxEffectScript : MonoBehaviour
 {
-    public bool shouldLoop;
+    public GameObject buildingToCover;
 
     private Animator boxAnimator;
     // Start is called before the first frame update
@@ -15,10 +15,10 @@ public class BoxEffectScript : MonoBehaviour
 
     void Update()
     {
-        if (!shouldLoop)
+        // The building will remain inactive untill it is fully built, only then should we start removing the box animation
+        if(buildingToCover.activeInHierarchy)
         {
             StopLooping();
-            gameObject.GetComponent<DestroyAfterTime>().ActivateTimer();
         }
     }
 
@@ -26,5 +26,6 @@ public class BoxEffectScript : MonoBehaviour
     public void StopLooping()
     {
         boxAnimator.SetBool("ShouldLoop", false);
+        gameObject.GetComponent<DestroyAfterTime>().ActivateTimer();
     }
 }

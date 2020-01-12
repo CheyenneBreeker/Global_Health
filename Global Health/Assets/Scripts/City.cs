@@ -52,7 +52,11 @@ public class City : MonoBehaviour
             if (building.name == buildingName)
             {
                 Debug.Log("Building found");
-                //Instantiate(boxPrefab, new Vector3(building.gameObject.transform.position.x, 0.6f, building.gameObject.transform.position.z), Quaternion.identity);
+
+                // Create the box and add the building to the box effect to have it open up at the right time
+                GameObject createdBox = Instantiate(boxPrefab, new Vector3(building.gameObject.transform.position.x, 0.6f, building.gameObject.transform.position.z), Quaternion.identity);
+                createdBox.GetComponent<BoxEffectScript>().buildingToCover = building.gameObject;
+
                 if (building.gameObject.GetComponent<BuildingConstruction>().CountdownStarted == false)
                 {
                     building.gameObject.GetComponent<BuildingConstruction>().Turncountdown = BuildTime;
