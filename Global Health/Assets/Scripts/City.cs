@@ -52,7 +52,7 @@ public class City : MonoBehaviour
             if (building.name == buildingName)
             {
                 Debug.Log("Building found");
-                Instantiate(boxPrefab, new Vector3(building.gameObject.transform.position.x, 0.6f, building.gameObject.transform.position.z), Quaternion.identity);
+                //Instantiate(boxPrefab, new Vector3(building.gameObject.transform.position.x, 0.6f, building.gameObject.transform.position.z), Quaternion.identity);
                 if (building.gameObject.GetComponent<BuildingConstruction>().CountdownStarted == false)
                 {
                     building.gameObject.GetComponent<BuildingConstruction>().Turncountdown = BuildTime;
