@@ -25,6 +25,8 @@ public class EndscreenScore : MonoBehaviour
 
     [SerializeField]
     private AudioClip buttonClicksSFX;
+    [SerializeField]
+    private AudioClip music;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +50,8 @@ public class EndscreenScore : MonoBehaviour
             death[i].text = "Deathrate: " + GameWorld.Instance.cities[i].deathrate.ToString();
             building[i].text = "Buildings: " + GameWorld.Instance.cities[i].countBuilding.ToString();
         }
+
+        AudioManager.Instance.PlayMusicWithFade(music);
 
         Destroy(GameObject.Find("GameWorldCanvas"));
     }

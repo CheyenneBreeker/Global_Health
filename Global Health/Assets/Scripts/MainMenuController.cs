@@ -13,21 +13,14 @@ public class MainMenuController : MonoBehaviour
     [SerializeField]
     private AudioClip buttonClicksSFX;
     [SerializeField]
-    private AudioClip music1;
-
-    [SerializeField]
-    private AudioClip music2;
-
-    //public AudioSource startGame;
-    //public AudioSource quitGame;
+    private AudioClip music;
 
     void Start()
     {
         //Initial values, this triggers the change method and defaults the scene to the main menu
         newMenuNumber = 0;
         currentMenuNumber = 99;
-        //GameObject.FindGameObjectWithTag("Music").GetComponent<SoundManager>().PlayMusic();
-        AudioManager.Instance.PlayMusic(music1);
+        AudioManager.Instance.PlayMusicWithFade(music);
     }
 
     void Update()

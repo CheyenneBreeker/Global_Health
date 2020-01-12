@@ -11,6 +11,10 @@ public class GameWorld : MonoBehaviour
     public int deathrate;
     public int building;
     public City[] cities;
+
+    [SerializeField]
+    private AudioClip music;
+
     public static GameWorld Instance { get; private set; }
     private void Start()
     {
@@ -25,6 +29,8 @@ public class GameWorld : MonoBehaviour
         UpdateDeathrate();
         UpdateBuilding();
         UpdateGameUI();
+
+        AudioManager.Instance.PlayMusicWithFade(music);
     }
 
     private void OnLevelWasLoaded(int levelNumber)

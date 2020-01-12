@@ -2837,6 +2837,7 @@ MonoBehaviour:
   - {fileID: 701026959}
   - {fileID: 706122866}
   buttonClicksSFX: {fileID: 8300000, guid: d94ef45e4cbede449807ef9694281cac, type: 3}
+  music: {fileID: 8300000, guid: 8640a8ab127bac844beef8ceaa08ad1b, type: 3}
 --- !u!4 &2088051672
 Transform:
   m_ObjectHideFlags: 0

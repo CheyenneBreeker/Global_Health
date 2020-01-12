@@ -7987,6 +7987,7 @@ MonoBehaviour:
   - {fileID: 287993141}
   - {fileID: 1971257161}
   - {fileID: 988710597}
+  music: {fileID: 8300000, guid: 67032d49d1ce9e4438f7f67b7c86ad0c, type: 3}
   delayValue: 0.5
   delayValueDeathrate: 0
   delayValueBuilding: 0

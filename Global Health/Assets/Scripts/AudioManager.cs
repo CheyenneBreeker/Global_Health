@@ -45,20 +45,12 @@ public class AudioManager : MonoBehaviour
 
         // Create audio sources, and save them as references
         musicSource = this.gameObject.AddComponent<AudioSource>();
+        musicSource2 = this.gameObject.AddComponent<AudioSource>();
         sfxSource = this.gameObject.AddComponent<AudioSource>();
 
         // Loop the music track
         musicSource.loop = true;
-    }
-
-    public void PlayMusic(AudioClip musicClip)
-    {
-        // Determine which source is active
-        AudioSource activeSource = (firstMusicSourceIsPlaying) ? musicSource : musicSource2;
-
-        musicSource.clip = musicClip;
-        musicSource.volume = 0.5f;
-        musicSource.Play();
+        musicSource2.loop = true;
     }
 
     public void PlayMusicWithFade(AudioClip newClip, float transitionTime = 1.0f)
