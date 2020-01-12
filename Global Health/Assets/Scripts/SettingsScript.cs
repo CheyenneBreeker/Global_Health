@@ -95,4 +95,9 @@ public class SettingsScript : MonoBehaviour
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
+
+    public void Mute()
+    {
+        AudioListener.pause = !AudioListener.pause;
+    }
 }
