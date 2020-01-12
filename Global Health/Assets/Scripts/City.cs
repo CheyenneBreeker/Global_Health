@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class City : MonoBehaviour
 {
-    public CityUI cityui;
+    private CityUI cityui;
+    private CityLogic cityLogic;
     public int currentPopulation;
     public int healthCare;
-    public int deathrate;
-    public string economy;
-    public int casesPrevented;
+    public int economy;
+    public int schooling;
+    public int deaths; 
+    public int newBorn;
     public int cureSucces;
     public Transform buildings;
     public GameObject boxPrefab;
 
     private void Start()
     {
+        cityui = this.gameObject.GetComponent(typeof(CityUI)) as CityUI;
+        cityLogic = this.gameObject.GetComponent(typeof(CityLogic)) as CityLogic;
         UpdateCityUI();
     }
 
@@ -23,7 +27,10 @@ public class City : MonoBehaviour
     {
         GameWorld.Instance.NewPopulation(currentPopulation);
     }
-
+    public void GetNewData()
+    {
+        cityLogic.NextTurn();
+    }
     public void UpdatePopulation(int n_population, bool substract)
     {
         if (substract)
@@ -67,6 +74,6 @@ public class City : MonoBehaviour
     }
     public void UpdateCityUI()
     {
-        cityui.UpdateUI(currentPopulation, healthCare, deathrate, economy, casesPrevented, cureSucces);
+        cityui.UpdateUI(currentPopulation, healthCare, deaths, economy, newBorn, cureSucces);
     }
 }
