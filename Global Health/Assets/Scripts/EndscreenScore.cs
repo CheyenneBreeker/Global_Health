@@ -63,10 +63,10 @@ public class EndscreenScore : MonoBehaviour
         ScreenCapture.CaptureScreenshot("Endscreen");
     }
 
-    public void QuitGame()
+    public void ReturnToMainMenu()
     {
-        Debug.Log("Quitting game...");
+        Debug.Log("Returning to main menu...");
+        SceneManager.LoadScene("MainMenu");
         AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
-        Application.Quit();
     }
 }

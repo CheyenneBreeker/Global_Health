@@ -230,9 +230,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 793541414}
-  - {fileID: 1660924797}
   m_Father: {fileID: 1537366851}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1735,6 +1734,7 @@ RectTransform:
   - {fileID: 2022931570}
   - {fileID: 1783521561}
   - {fileID: 655789396}
+  - {fileID: 1660924797}
   - {fileID: 106185574}
   m_Father: {fileID: 777315210}
   m_RootOrder: 0
@@ -1990,12 +1990,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25278, y: 0.25278, z: 0.25278}
   m_Children: []
-  m_Father: {fileID: 106185574}
-  m_RootOrder: 1
+  m_Father: {fileID: 1537366851}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 180, y: 15}
+  m_AnchoredPosition: {x: 181, y: 208.99997}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1660924798
@@ -2042,7 +2042,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2088051671}
-        m_MethodName: QuitGame
+        m_MethodName: ReturnToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
