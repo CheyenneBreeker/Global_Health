@@ -13,9 +13,18 @@ public class CurrentTurnState : IState
     {
         Debug.Log("ENTERING CURRENT TURN STATE");
 
+        if (owner.turnCounter.maxTurnCount - owner.turnCounter.turnCount <= 5)
+        {
+            owner.StartCoroutine(owner.TurnFeedback(owner.turnCounter.maxTurnCount - owner.turnCounter.turnCount + " Turns Remaining"));
+        }
+        else
+        {
+            owner.StartCoroutine(owner.TurnFeedback("Turn " + (owner.turnCounter.turnCount + 1)));
+        }
+
         // Increases turnCount value, updates the counter text and enables the NextTurn button.
-        owner.tCounter.IncreaseTurnCount();
-        owner.tButton.gameObject.SetActive(true);
+        owner.turnCounter.IncreaseTurnCount();
+        owner.turnButton.gameObject.SetActive(true);
 
         owner.cardController.GetCards();
     }
@@ -31,8 +40,10 @@ public class CurrentTurnState : IState
     {
         Debug.Log("EXITING CURRENT TURN STATE");
 
+        owner.StartCoroutine(owner.TurnFeedback("Turn Ended"));
+
         // Disables the NextTurn button when exiting the CurrentTurn state.
-        owner.tButton.gameObject.SetActive(false);
+        owner.turnButton.gameObject.SetActive(false);
         owner.cardController.LoseCards();
 
         owner.eventCardDeck.EventTrigger();
