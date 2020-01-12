@@ -745,6 +745,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6063c7de708ea824482a03f828e1ec3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &319572418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 37a92f8a28faa6448a0908396d8cfdd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2113482667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &319572420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319572418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
 --- !u!1 &331436954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +1057,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a29364f6bc7b9f34184f929b34244515,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a29364f6bc7b9f34184f929b34244515,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1109,6 +1134,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a29364f6bc7b9f34184f929b34244515, type: 3}
+--- !u!1 &399367813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 37a92f8a28faa6448a0908396d8cfdd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1843009603}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &399367815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399367813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
 --- !u!1001 &414848001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1910,6 +1955,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardController: {fileID: 2067746652}
+  Buildings:
+  - {fileID: 1822581470}
+  - {fileID: 1684860883}
+  - {fileID: 782703399}
+  - {fileID: 717534132}
+  - {fileID: 1200912169}
+  - {fileID: 319572418}
+  - {fileID: 673252901}
+  - {fileID: 766268046}
+  - {fileID: 399367813}
+  - {fileID: 1136631446}
+  - {fileID: 1508249395}
+  - {fileID: 1507849712}
+  - {fileID: 917380405}
+  - {fileID: 1547203607}
   tCounter: {fileID: 488053278}
   tButton: {fileID: 489876443}
   eventCardDeck: {fileID: 54982584}
@@ -2436,6 +2496,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622538195}
   m_CullTransparentMesh: 0
+--- !u!1 &673252901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a29364f6bc7b9f34184f929b34244515,
+    type: 3}
+  m_PrefabInstance: {fileID: 371829479}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &673252905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673252901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
 --- !u!1 &678744712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2528,6 +2608,26 @@ Transform:
   m_Father: {fileID: 1103482574}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &717534132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a29364f6bc7b9f34184f929b34244515,
+    type: 3}
+  m_PrefabInstance: {fileID: 1158348881}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &717534136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717534132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
 --- !u!1 &719660171
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,6 +2888,7 @@ GameObject:
   - component: {fileID: 766268050}
   - component: {fileID: 766268049}
   - component: {fileID: 766268048}
+  - component: {fileID: 766268051}
   m_Layer: 0
   m_Name: TownHall
   m_TagString: Untagged
@@ -2868,6 +2969,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766268046}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &766268051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766268046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
 --- !u!1 &782703399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2880,6 +2995,7 @@ GameObject:
   - component: {fileID: 782703403}
   - component: {fileID: 782703402}
   - component: {fileID: 782703401}
+  - component: {fileID: 782703404}
   m_Layer: 0
   m_Name: TownHall
   m_TagString: Untagged
@@ -2960,6 +3076,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782703399}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &782703404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782703399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
 --- !u!1 &783714217
 GameObject:
   m_ObjectHideFlags: 0
@@ -3432,6 +3562,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 37a92f8a28faa6448a0908396d8cfdd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 37a92f8a28faa6448a0908396d8cfdd3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3704,6 +3839,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897993688}
   m_CullTransparentMesh: 0
+--- !u!1 &917380405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a29364f6bc7b9f34184f929b34244515,
+    type: 3}
+  m_PrefabInstance: {fileID: 1654335313}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &917380409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917380405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
 --- !u!1 &950975170
 GameObject:
   m_ObjectHideFlags: 0
@@ -4252,6 +4407,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9b881d78b2a7ff24a944affbbdc85195,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9b881d78b2a7ff24a944affbbdc85195,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4324,6 +4484,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b881d78b2a7ff24a944affbbdc85195, type: 3}
+--- !u!1 &1136631446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a29364f6bc7b9f34184f929b34244515,
+    type: 3}
+  m_PrefabInstance: {fileID: 1864325605}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1136631450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136631446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
 --- !u!1001 &1158348881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4340,6 +4520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a29364f6bc7b9f34184f929b34244515,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a29364f6bc7b9f34184f929b34244515,
         type: 3}
@@ -4553,6 +4738,7 @@ GameObject:
   - component: {fileID: 1200912173}
   - component: {fileID: 1200912172}
   - component: {fileID: 1200912171}
+  - component: {fileID: 1200912174}
   m_Layer: 0
   m_Name: TownHall
   m_TagString: Untagged
@@ -4633,6 +4819,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200912169}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1200912174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200912169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
 --- !u!1 &1231363821
 GameObject:
   m_ObjectHideFlags: 0
@@ -4685,6 +4885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9b881d78b2a7ff24a944affbbdc85195,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9b881d78b2a7ff24a944affbbdc85195,
         type: 3}
@@ -5120,6 +5325,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 37a92f8a28faa6448a0908396d8cfdd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 37a92f8a28faa6448a0908396d8cfdd3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5319,6 +5529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645937794760322864, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: CityBuildings
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67c968b5a680c954382aa03811c692d7, type: 3}
@@ -5914,6 +6129,7 @@ GameObject:
   - component: {fileID: 1507849716}
   - component: {fileID: 1507849715}
   - component: {fileID: 1507849714}
+  - component: {fileID: 1507849717}
   m_Layer: 0
   m_Name: TownHall
   m_TagString: Untagged
@@ -5994,6 +6210,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507849712}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1507849717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507849712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
+--- !u!1 &1508249395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9b881d78b2a7ff24a944affbbdc85195,
+    type: 3}
+  m_PrefabInstance: {fileID: 1232770483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1508249397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508249395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
 --- !u!1 &1523324264
 GameObject:
   m_ObjectHideFlags: 0
@@ -6317,6 +6567,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3645937794760322864, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: CityBuildings
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67c968b5a680c954382aa03811c692d7, type: 3}
 --- !u!1 &1541333166
@@ -6462,6 +6717,26 @@ MonoBehaviour:
   rotateLeftKey: 122
   useMouseRotation: 1
   mouseRotationKey: 324
+--- !u!1 &1547203607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 37a92f8a28faa6448a0908396d8cfdd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 831247050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1547203609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547203607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
 --- !u!1 &1573864219
 GameObject:
   m_ObjectHideFlags: 0
@@ -6912,6 +7187,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a29364f6bc7b9f34184f929b34244515,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a29364f6bc7b9f34184f929b34244515,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7061,6 +7341,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665999253}
   m_CullTransparentMesh: 0
+--- !u!1 &1684860883 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9b881d78b2a7ff24a944affbbdc85195,
+    type: 3}
+  m_PrefabInstance: {fileID: 1123229370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1684860885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684860883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
 --- !u!1 &1702996534
 GameObject:
   m_ObjectHideFlags: 0
@@ -7281,6 +7581,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: City name
       objectReference: {fileID: 0}
+    - target: {fileID: 3645937794760322864, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: CityBuildings
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67c968b5a680c954382aa03811c692d7, type: 3}
 --- !u!1 &1816515063
@@ -7360,6 +7665,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816515063}
   m_CullTransparentMesh: 0
+--- !u!1 &1822581470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 37a92f8a28faa6448a0908396d8cfdd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1354327017}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1822581472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822581470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f05678762e8d24eac6fddac3cbdf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turncountdown: 0
+  CountdownStarted: 0
 --- !u!1 &1839667998
 GameObject:
   m_ObjectHideFlags: 0
@@ -7455,6 +7780,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 37a92f8a28faa6448a0908396d8cfdd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 37a92f8a28faa6448a0908396d8cfdd3,
         type: 3}
@@ -7636,6 +7966,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a29364f6bc7b9f34184f929b34244515,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a29364f6bc7b9f34184f929b34244515,
         type: 3}
@@ -8196,6 +8531,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: City name
       objectReference: {fileID: 0}
+    - target: {fileID: 3645937794760322864, guid: 67c968b5a680c954382aa03811c692d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: CityBuildings
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67c968b5a680c954382aa03811c692d7, type: 3}
 --- !u!1 &2057003935
@@ -8372,6 +8712,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 37a92f8a28faa6448a0908396d8cfdd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 37a92f8a28faa6448a0908396d8cfdd3,
         type: 3}

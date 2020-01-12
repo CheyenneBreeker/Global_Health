@@ -20,3 +20,4 @@ MonoBehaviour:
   NegativeValue: 0
   affectedCity: 1
   AddedBuilding: RadioTower
+  TurnCountdown: 3

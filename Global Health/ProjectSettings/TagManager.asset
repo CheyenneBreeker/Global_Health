@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - EventDeck
+  - City
+  - CityBuildings
   layers:
   - Default
   - TransparentFX

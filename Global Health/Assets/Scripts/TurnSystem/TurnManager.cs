@@ -10,6 +10,8 @@ public class TurnManager : MonoBehaviour
 
     // Card Controller
     public CardController cardController;
+    // Cities
+    public GameObject[] Buildings;
 
     // UI elements.
     public TurnCounter tCounter;
@@ -20,7 +22,7 @@ public class TurnManager : MonoBehaviour
     // Sets the state to enter at the start of the game.
     private void Start()
     {
-        stateMachine.ChangeState(new CurrentTurnState(this));               
+        stateMachine.ChangeState(new CurrentTurnState(this));
     }
 
     // Updates the state that's currently active. 
@@ -43,6 +45,14 @@ public class TurnManager : MonoBehaviour
         {
             GameObject.Destroy(child.gameObject);
         }
+        //Advance Building construction by 1
+
+        foreach(GameObject Building in Buildings)
+        {
+            Building.GetComponent<BuildingConstruction>().BuildingCountdown();
+            
+        }
+
         cardController.CardsPlayed = 0;
         stateMachine.ChangeState(new CurrentTurnState(this));
         

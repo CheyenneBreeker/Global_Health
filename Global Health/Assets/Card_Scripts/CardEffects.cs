@@ -25,9 +25,11 @@ public class CardEffects : MonoBehaviour
 
     public void ConstructBuilding(object[] CardVariables)
     {
+
         int affectedCity = (int)CardVariables[0];
         string cardString = (string)CardVariables[3];
+        int CardTime = (int)CardVariables[4];
 
-        GameWorld.Instance.cities[affectedCity].ConstructBuilding(cardString);
+        GameWorld.Instance.cities[affectedCity].ConstructBuilding(cardString,CardTime);
     }
 }

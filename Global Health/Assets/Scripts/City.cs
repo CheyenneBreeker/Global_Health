@@ -44,7 +44,7 @@ public class City : MonoBehaviour
         UpdateCityUI();
     }
 
-    public void ConstructBuilding(string buildingName)
+    public void ConstructBuilding(string buildingName, int BuildTime)
     {
         Debug.Log("Building called");
         foreach (Transform building in buildings)
@@ -53,7 +53,11 @@ public class City : MonoBehaviour
             {
                 Debug.Log("Building found");
                 Instantiate(boxPrefab, new Vector3(building.gameObject.transform.position.x, 0.6f, building.gameObject.transform.position.z), Quaternion.identity);
-                building.gameObject.SetActive(true);
+                if (building.gameObject.GetComponent<BuildingConstruction>().CountdownStarted == false)
+                {
+                    building.gameObject.GetComponent<BuildingConstruction>().Turncountdown = BuildTime;
+                    building.gameObject.GetComponent<BuildingConstruction>().CountdownStarted = true;
+                }
             }
         }
     }

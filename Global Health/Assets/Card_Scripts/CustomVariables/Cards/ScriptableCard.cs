@@ -25,5 +25,7 @@ public class ScriptableCard : ScriptableObject
     public string AddedBuilding;
 
 
+    [Header("Duration of the effect or when the card goes into effect")]
+    public int TurnCountdown;
 }
 
