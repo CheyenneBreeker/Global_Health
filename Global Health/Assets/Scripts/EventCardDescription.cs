@@ -77,6 +77,7 @@ public class EventCardDescription : MonoBehaviour
 
     private IEnumerator CardAppear()
     {
+        yield return new WaitForSeconds(1.5f);
         cardAni.Play("EventCard_Appear");
         yield return new WaitForSeconds(2.0f);
         cardAni.Play("EventCard_Idle2");
