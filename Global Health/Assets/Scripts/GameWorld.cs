@@ -138,14 +138,6 @@ public class GameWorld : MonoBehaviour
         Debug.Log("pop: " + population);
     }
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GoToScene();
-        }
-    }
-
     public void GoToScene()
     {
         SceneManager.LoadScene("Endscreen");
