@@ -58,14 +58,15 @@ public class LinkedCard : MonoBehaviour
         if (currentlySelectedCard == gameObject)
         {
             LeanTween.moveY(gameObject, 40 + amountSelectedCardRaisedVertically, 0.2f);
-            gameObject.GetComponent<Image>().color = new Color(255, 0, 0);
+            gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         }
 
         // Return the card to its original position when selection gets removed (unless it is currently being played)
         else if (!cardIsBeingPlayed)
         {
             LeanTween.moveY(gameObject, 40, 0.2f);
-            gameObject.GetComponent<Image>().color = new Color(255, 255, 255);
+            gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 0.7f);
+
         }
     }
 }
