@@ -457,8 +457,6 @@ MonoBehaviour:
   ambientSlider: {fileID: 1883817420}
   resolutionDropdown: {fileID: 1636401808}
   qualityDropdown: {fileID: 1072041710}
-  effectsAudioMixer: {fileID: 24100000, guid: a360b1dd6654a7a44a7900afa6034234, type: 2}
-  ambientAudioMixer: {fileID: 24100000, guid: ff766f6c515a10248887e7a6c86f40aa, type: 2}
 --- !u!4 &207193150
 Transform:
   m_ObjectHideFlags: 0
@@ -3188,6 +3186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb027b042c7c3748aadb5c01c11daa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AmbientAudioMixer: {fileID: 24300002, guid: ff766f6c515a10248887e7a6c86f40aa, type: 2}
+  EffectsAudioMixer: {fileID: 24300002, guid: a360b1dd6654a7a44a7900afa6034234, type: 2}
 --- !u!4 &1087899722
 Transform:
   m_ObjectHideFlags: 0
@@ -5867,7 +5867,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 207193149}
+      - m_Target: {fileID: 1087899721}
         m_MethodName: SetAmbientVolume
         m_Mode: 0
         m_Arguments:
@@ -6053,7 +6053,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 207193149}
+      - m_Target: {fileID: 1087899721}
         m_MethodName: SetSFXVolume
         m_Mode: 0
         m_Arguments:

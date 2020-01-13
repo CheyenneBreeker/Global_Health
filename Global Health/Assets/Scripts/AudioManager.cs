@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -38,6 +40,9 @@ public class AudioManager : MonoBehaviour
     private bool firstMusicSourceIsPlaying;
     #endregion
 
+    public AudioMixerGroup AmbientAudioMixer;
+    public AudioMixerGroup EffectsAudioMixer;
+
     private void Awake()
     {
         // Make sure we don't destroy this instance
@@ -48,9 +53,15 @@ public class AudioManager : MonoBehaviour
         musicSource2 = this.gameObject.AddComponent<AudioSource>();
         sfxSource = this.gameObject.AddComponent<AudioSource>();
 
+        musicSource.outputAudioMixerGroup = AmbientAudioMixer;
+        musicSource2.outputAudioMixerGroup = AmbientAudioMixer;
+
+        sfxSource.outputAudioMixerGroup = EffectsAudioMixer;
+
         // Loop the music track
         musicSource.loop = true;
         musicSource2.loop = true;
+
     }
 
     public void PlayMusicWithFade(AudioClip newClip, float transitionTime = 1.0f)
@@ -62,6 +73,7 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator UpdateMusicWithFade(AudioSource activeSource, AudioClip newClip, float transitionTime)
     {
+
         // Make sure the source is active and playing
         if (!activeSource.isPlaying)
         {
@@ -99,14 +111,23 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(clip, volume);
     }
 
-    public void SetMusicVolume(float volume)
-    {
-        musicSource.volume = volume;
-        musicSource2.volume = volume;
-    }
-
+    //Used by the SFXVolumeSlider onChange
     public void SetSFXVolume(float volume)
     {
-        sfxSource.volume = volume;
+        EffectsAudioMixer.audioMixer.SetFloat("SFXVolume", volume);
+
+        //Save the current volume in PlayerPrefs for future sessions
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+        PlayerPrefs.Save();
+    }
+
+    //Used by the ambientVolume slider onChange
+    public void SetAmbientVolume(float volume)
+    {
+        AmbientAudioMixer.audioMixer.SetFloat("AmbientVolume", volume);
+
+        //Save the current volume in PlayerPrefs for future sessions
+        PlayerPrefs.SetFloat("AmbientVolume", volume);
+        PlayerPrefs.Save();
     }
 }

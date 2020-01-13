@@ -11,9 +11,6 @@ public class SettingsScript : MonoBehaviour
     public Dropdown resolutionDropdown;
     public Dropdown qualityDropdown;
 
-    public AudioMixer effectsAudioMixer;
-    public AudioMixer ambientAudioMixer;
-
     Resolution[] resolutions;
 
     void Start()
@@ -21,6 +18,7 @@ public class SettingsScript : MonoBehaviour
         //Get the stored settings from a previous session and adjust the menu accordingly
         sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume"); //Defaults to 0 if no data is found
         ambientSlider.value = PlayerPrefs.GetFloat("AmbientVolume"); //Defaults to 0 if no data is found
+
         qualityDropdown.value = QualitySettings.GetQualityLevel(); //Get the quality the user had already set on the launcher
 
         FillResolutionDropdown(); //Fill the resolutiondropdown with all available resolutions, also sets the default value on current resolution
@@ -55,26 +53,6 @@ public class SettingsScript : MonoBehaviour
         //Adjust the default resolution selection to be equal to our current resolution
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
-    }
-
-    //Used by the SFXVolumeSlider onChange
-    public void SetSFXVolume(float volume)
-    {
-        effectsAudioMixer.SetFloat("SFXVolume", volume);
-
-        //Save the current volume in PlayerPrefs for future sessions
-        PlayerPrefs.SetFloat("SFXVolume", volume);
-        PlayerPrefs.Save();
-    }
-
-    //Used by the ambientVolume slider onChange
-    public void SetAmbientVolume(float volume)
-    {
-        ambientAudioMixer.SetFloat("AmbientVolume", volume);
-
-        //Save the current volume in PlayerPrefs for future sessions
-        PlayerPrefs.SetFloat("AmbientVolume", volume);
-        PlayerPrefs.Save();
     }
 
     //Used by the quality dropdown onChange
