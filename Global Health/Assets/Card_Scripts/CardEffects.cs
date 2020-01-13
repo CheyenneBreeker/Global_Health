@@ -34,10 +34,9 @@ public class CardEffects : MonoBehaviour
     {
 
         int affectedCity = (int)CardVariables.affectedCity;
-        string cardString = (string)CardVariables.cardFlavorText;
+        string cardString = (string)CardVariables.AddedBuilding;
         int CardTime = (int)CardVariables.TurnCountdown;
-
-        cardDeck.Remove(CardVariables);
         GameWorld.Instance.cities[affectedCity].ConstructBuilding(cardString,CardTime);
+        cardDeck.Remove(CardVariables);
     }
 }
