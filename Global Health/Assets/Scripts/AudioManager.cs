@@ -111,23 +111,23 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(clip, volume);
     }
 
-    //Used by the SFXVolumeSlider onChange
-    public void SetSFXVolume(float volume)
-    {
-        EffectsAudioMixer.audioMixer.SetFloat("SFXVolume", volume);
+    ////Used by the SFXVolumeSlider onChange
+    //public void SetSFXVolume(float volume)
+    //{
+    //    EffectsAudioMixer.audioMixer.SetFloat("SFXVolume", volume);
 
-        //Save the current volume in PlayerPrefs for future sessions
-        PlayerPrefs.SetFloat("SFXVolume", volume);
-        PlayerPrefs.Save();
-    }
+    //    //Save the current volume in PlayerPrefs for future sessions
+    //    PlayerPrefs.SetFloat("SFXVolume", volume);
+    //    PlayerPrefs.Save();
+    //}
 
-    //Used by the ambientVolume slider onChange
-    public void SetAmbientVolume(float volume)
-    {
-        AmbientAudioMixer.audioMixer.SetFloat("AmbientVolume", volume);
+    ////Used by the ambientVolume slider onChange
+    //public void SetAmbientVolume(float volume)
+    //{
+    //    AmbientAudioMixer.audioMixer.SetFloat("AmbientVolume", volume);
 
-        //Save the current volume in PlayerPrefs for future sessions
-        PlayerPrefs.SetFloat("AmbientVolume", volume);
-        PlayerPrefs.Save();
-    }
+    //    //Save the current volume in PlayerPrefs for future sessions
+    //    PlayerPrefs.SetFloat("AmbientVolume", volume);
+    //    PlayerPrefs.Save();
+    //}
 }
