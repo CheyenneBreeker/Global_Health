@@ -8,6 +8,8 @@ public class EventCardDeck : MonoBehaviour
     public List<EventCard> usedPile = new List<EventCard>();
     public int eventTriggers = 0;
     public EventCardDescription newDescription;
+    [HideInInspector]
+    public bool eventActive = false;
 
     void Start()
     {
@@ -50,6 +52,7 @@ public class EventCardDeck : MonoBehaviour
         {
             TakeCard();
             eventTriggers = 0;
+            eventActive = true;
         }
         else
         {

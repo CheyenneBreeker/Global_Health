@@ -17,6 +17,7 @@ public class EventCardDescription : MonoBehaviour
     public EventCardEffects effect;
 
     public Animator cardAni;
+    public Button nextTurnButton;
 
     public void Start()
     {
@@ -93,5 +94,8 @@ public class EventCardDescription : MonoBehaviour
         choice3.gameObject.SetActive(false);
         choice4.gameObject.SetActive(false);
         gameObject.SetActive(false);
+
+        nextTurnButton.gameObject.SetActive(true);
+        test.eventActive = false;
     }
 }
