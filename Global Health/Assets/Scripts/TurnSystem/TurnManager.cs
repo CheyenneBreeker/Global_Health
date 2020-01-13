@@ -41,12 +41,13 @@ public class TurnManager : MonoBehaviour
     public void NextTurn()
     {
         stateMachine.ChangeState(new NextTurnState(this));
-        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
     }
 
     // Method to go to the CurrentTurnState.
     public void BeginTurn()
     {
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
+
         //remove cards on canvas
         foreach (Transform child in cardController.CardContainer.transform)
         {
