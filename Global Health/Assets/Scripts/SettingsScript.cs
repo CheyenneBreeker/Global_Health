@@ -11,6 +11,9 @@ public class SettingsScript : MonoBehaviour
     public Dropdown resolutionDropdown;
     public Dropdown qualityDropdown;
 
+    public AudioMixerGroup AmbientAudioMixer;
+    public AudioMixerGroup EffectsAudioMixer;
+
     Resolution[] resolutions;
 
     void Start()
@@ -72,6 +75,26 @@ public class SettingsScript : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
+    //Used by the SFXVolumeSlider onChange
+    public void SetSFXVolume(float volume)
+    {
+        EffectsAudioMixer.audioMixer.SetFloat("SFXVolume", volume);
+
+        //Save the current volume in PlayerPrefs for future sessions
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+        PlayerPrefs.Save();
+    }
+
+    //Used by the ambientVolume slider onChange
+    public void SetAmbientVolume(float volume)
+    {
+        AmbientAudioMixer.audioMixer.SetFloat("AmbientVolume", volume);
+
+        //Save the current volume in PlayerPrefs for future sessions
+        PlayerPrefs.SetFloat("AmbientVolume", volume);
+        PlayerPrefs.Save();
     }
 
     public void Mute()

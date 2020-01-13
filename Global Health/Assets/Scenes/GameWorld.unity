@@ -8028,8 +8028,8 @@ MonoBehaviour:
   ambientSlider: {fileID: 807099441}
   resolutionDropdown: {fileID: 1398166893}
   qualityDropdown: {fileID: 950975172}
-  effectsAudioMixer: {fileID: 24100000, guid: a360b1dd6654a7a44a7900afa6034234, type: 2}
-  ambientAudioMixer: {fileID: 24100000, guid: ff766f6c515a10248887e7a6c86f40aa, type: 2}
+  AmbientAudioMixer: {fileID: 24300002, guid: ff766f6c515a10248887e7a6c86f40aa, type: 2}
+  EffectsAudioMixer: {fileID: 24300002, guid: a360b1dd6654a7a44a7900afa6034234, type: 2}
 --- !u!4 &1879172834
 Transform:
   m_ObjectHideFlags: 0
