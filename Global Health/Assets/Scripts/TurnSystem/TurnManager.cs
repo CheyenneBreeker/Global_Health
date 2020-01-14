@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TurnManager : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class TurnManager : MonoBehaviour
 
     public EventCardDeck eventCardDeck;
 
+    [SerializeField]
+    private AudioClip buttonClicksSFX;
+
     // Sets the state to enter at the start of the game.
     private void Start()
     {
@@ -30,6 +34,10 @@ public class TurnManager : MonoBehaviour
     private void Update()
     {
         stateMachine.Update();
+        if (turnCounter.turnCount > 30)
+        {
+            SceneManager.LoadScene("Endscreen");
+        }
     }
 
     // Method to go to the NextTurnState.
@@ -41,6 +49,8 @@ public class TurnManager : MonoBehaviour
     // Method to go to the CurrentTurnState.
     public void BeginTurn()
     {
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
+
         //remove cards on canvas
         foreach (Transform child in cardController.CardContainer.transform)
         {

@@ -19,6 +19,9 @@ public class EventCardDescription : MonoBehaviour
     public Animator cardAni;
     public Button nextTurnButton;
 
+    [SerializeField]
+    private AudioClip buttonClicksSFX;
+
     public void Start()
     {
         gameObject.SetActive(false);
@@ -52,22 +55,26 @@ public class EventCardDescription : MonoBehaviour
 
     public void OnButtonClick1()
     {
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         SetButtonsNonActive();
     }
 
     public void OnButtonClick2()
     {
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         SetButtonsNonActive();
         effect.CardEffect(card._name);
     }
 
     public void OnButtonClick3()
     {
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         SetButtonsNonActive();
     }
 
     public void OnButtonClick4()
     {
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         SetButtonsNonActive();
     }
 

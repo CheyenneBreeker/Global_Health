@@ -7,6 +7,9 @@ public class GameController : MonoBehaviour
 {
     public GameObject pausePanel;
 
+    [SerializeField]
+    private AudioClip buttonClicksSFX;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -17,6 +20,9 @@ public class GameController : MonoBehaviour
 
     public void TogglePause()
     {
+        // Pause button sound
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
+
         if (pausePanel.activeInHierarchy)
         {
             pausePanel.SetActive(false);
@@ -32,6 +38,9 @@ public class GameController : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        // Menu button sound
+        AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
+
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }

@@ -11,6 +11,9 @@ public class EventCardDeck : MonoBehaviour
     [HideInInspector]
     public bool eventActive = false;
 
+    [SerializeField]
+    private AudioClip eventSFX;
+
     void Start()
     {
         EventCard event0 = new EventCard("event0", "A new born girl in forest city refuses to drink and has a high fever. \n\n1. Send her to the nearest hospital. \n\n2. Send her to a health centre. \n\n3. Advise rest.", 3);
@@ -51,6 +54,7 @@ public class EventCardDeck : MonoBehaviour
         if (diceValue >= 6)
         {
             TakeCard();
+            AudioManager.Instance.PlayEventSFX(eventSFX, 1);
             eventTriggers = 0;
             eventActive = true;
         }

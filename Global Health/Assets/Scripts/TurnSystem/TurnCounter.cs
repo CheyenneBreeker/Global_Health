@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TurnCounter : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class TurnCounter : MonoBehaviour
     public void IncreaseTurnCount()
     {
         turnCount++;
-        turnCountText.text = "Week: " + turnCount + " / " + maxTurnCount;
+        turnCountText.text = "Week: " + turnCount + " / " + maxTurnCount;;
+
+        if (turnCount > 30)
+        {
+            turnCountText.enabled = false;
+        }
     }
 }
