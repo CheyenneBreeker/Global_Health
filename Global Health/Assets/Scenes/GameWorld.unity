@@ -5601,6 +5601,11 @@ PrefabInstance:
       propertyPath: nextTurnButton
       value: 
       objectReference: {fileID: 489876443}
+    - target: {fileID: 1760081549063796415, guid: 0ed947c8727921d44863dc626ab6a5a9,
+        type: 3}
+      propertyPath: buttonClicksSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: d94ef45e4cbede449807ef9694281cac, type: 3}
     - target: {fileID: 1760081547518486019, guid: 0ed947c8727921d44863dc626ab6a5a9,
         type: 3}
       propertyPath: m_LocalPosition.z
