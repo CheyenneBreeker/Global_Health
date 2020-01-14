@@ -122,5 +122,102 @@ PrefabInstance:
       propertyPath: cardController
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6833218671151812017, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: linkedCard
+      value: 
+      objectReference: {fileID: 11400000, guid: 55e3e848aa51b1741b6b1f2ef33aecde,
+        type: 2}
+    - target: {fileID: 6539172685268293061, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5cf66cf88e2bc7947b379ac7b97db21f,
+        type: 3}
+    - target: {fileID: 9135880325081148344, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -14.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135880325081148344, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135880325081148344, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 131.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135880325081148344, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195911371329468046, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 60.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195911371329468046, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -44.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195911371329468046, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 48.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146279324868907772, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146279324868907772, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 38.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 490593255469483776, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_Text
+      value: 4000
+      objectReference: {fileID: 0}
+    - target: {fileID: 490593255469483776, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 490593255469483776, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3024430113967368928, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_Text
+      value: Improve the healthcare of City 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437549226474735369, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_Text
+      value: City 2 Change Healthcare
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437549226474735369, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437549226474735369, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437549226474735369, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c78550e23ff35748b80b0c9a532c300, type: 3}
