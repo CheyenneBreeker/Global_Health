@@ -143,9 +143,4 @@ public class GameWorld : MonoBehaviour
         worldPopulation.text = "World population: " + population.ToString();
         Debug.Log("pop: " + population);
     }
-
-    public void GoToScene()
-    {
-        SceneManager.LoadScene("Endscreen");
-    }
 }

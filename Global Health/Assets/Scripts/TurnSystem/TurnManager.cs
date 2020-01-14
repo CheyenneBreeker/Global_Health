@@ -34,7 +34,7 @@ public class TurnManager : MonoBehaviour
     private void Update()
     {
         stateMachine.Update();
-        if (turnCounter.turnCount > 30)
+        if (turnCounter.turnCount > turnCounter.maxTurnCount)
         {
             SceneManager.LoadScene("Endscreen");
         }
