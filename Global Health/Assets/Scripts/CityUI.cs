@@ -26,7 +26,6 @@ public class CityUI : MonoBehaviour
     public bool isUiActive;
     void OnMouseDown()
     {
-        Debug.Log("Clicked");
         if (!isUiActive)
         {
             isUiActive = true;

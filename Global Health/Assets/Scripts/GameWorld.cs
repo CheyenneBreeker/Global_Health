@@ -102,7 +102,6 @@ public class GameWorld : MonoBehaviour
             cities[i].SendDeathrate();
         }
         yield return new WaitForSeconds(delayValueDeathrate);
-        Debug.Log("death: " + deaths);
     }
 
 
@@ -126,7 +125,6 @@ public class GameWorld : MonoBehaviour
             cities[i].SendBuilding();
         }
         yield return new WaitForSeconds(delayValueBuilding);
-        Debug.Log("buildings: " + building);
     }
 
     public void UpdateCities()

@@ -101,7 +101,6 @@ public class City : MonoBehaviour
 
     public void SendBuilding()
     {
-        Debug.Log(countBuilding);
         GameWorld.Instance.NewBuilding(countBuilding);
     }
 
