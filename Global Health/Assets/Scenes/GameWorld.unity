@@ -5366,6 +5366,11 @@ PrefabInstance:
       propertyPath: cardAni
       value: 
       objectReference: {fileID: 989612541}
+    - target: {fileID: 1760081549063796415, guid: 0ed947c8727921d44863dc626ab6a5a9,
+        type: 3}
+      propertyPath: nextTurnButton
+      value: 
+      objectReference: {fileID: 489876443}
     - target: {fileID: 1760081547518486019, guid: 0ed947c8727921d44863dc626ab6a5a9,
         type: 3}
       propertyPath: m_LocalPosition.z
