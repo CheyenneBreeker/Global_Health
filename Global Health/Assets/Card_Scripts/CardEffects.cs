@@ -5,31 +5,38 @@ using UnityEngine;
 public class CardEffects : MonoBehaviour
 {
 
-    public void ChangePopulation( object[] CardVariables)
+    private List<ScriptableCard> cardDeck;
+
+    public void Start()
     {
-        int affectedCity = (int)CardVariables[0];
-        int cardValue = (int)CardVariables[1];
-        bool cardBool = (bool)CardVariables[2];
+        cardDeck = GetComponent<CardDeck>().cardDeck;
+    }
+
+    public void ChangePopulation(ScriptableCard CardVariables)
+    {
+        int affectedCity = (int)CardVariables.affectedCity;
+        int cardValue = (int)CardVariables.cardValue;
+        bool cardBool = (bool)CardVariables.NegativeValue;
 
         GameWorld.Instance.cities[affectedCity].UpdatePopulation(cardValue, cardBool);
     }
 
-    public void ChangeHealthCare(object[] CardVariables)
+    public void ChangeHealthCare(ScriptableCard CardVariables)
     {
-        int affectedCity = (int)CardVariables[0];
-        int cardValue = (int)CardVariables[1];
-        bool cardBool = (bool)CardVariables[2];
+        int affectedCity = (int)CardVariables.affectedCity;
+        int cardValue = (int)CardVariables.cardValue;
+        bool cardBool = (bool)CardVariables.NegativeValue;
 
         GameWorld.Instance.cities[affectedCity].UpdateHealthCare(cardValue, cardBool);
     }
 
-    public void ConstructBuilding(object[] CardVariables)
+    public void ConstructBuilding(ScriptableCard CardVariables)
     {
 
-        int affectedCity = (int)CardVariables[0];
-        string cardString = (string)CardVariables[3];
-        int CardTime = (int)CardVariables[4];
-
+        int affectedCity = (int)CardVariables.affectedCity;
+        string cardString = (string)CardVariables.AddedBuilding;
+        int CardTime = (int)CardVariables.TurnCountdown;
         GameWorld.Instance.cities[affectedCity].ConstructBuilding(cardString,CardTime);
+        cardDeck.Remove(CardVariables);
     }
 }

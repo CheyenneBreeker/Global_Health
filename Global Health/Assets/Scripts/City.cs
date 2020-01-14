@@ -70,6 +70,10 @@ public class City : MonoBehaviour
                     building.gameObject.GetComponent<BuildingConstruction>().CountdownStarted = true;
                 }
             }
+            else
+            {
+                Debug.Log("Did not find Building: " + buildingName);
+            }
         }
     }
     public void UpdateCityUI()
