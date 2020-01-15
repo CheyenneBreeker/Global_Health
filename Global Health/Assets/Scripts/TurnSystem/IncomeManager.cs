@@ -6,13 +6,18 @@ using UnityEngine.UI;
 // Manages the income that the player will receive over time, is a component of the turnmanager gameobject.
 public class IncomeManager : MonoBehaviour
 {
+    // Default values
     public int defaultIncome = 5000;
-    public int defaultTurnsTillIncome = 5;
+    public float defaultTurnsTillIncome = 5;
 
-    public int currentTurnsTillIncome;
+    // Adjustable values
     public int currentIncome;
+    public float currentTurnsTillIncome;
 
+    // Instance to make it easier for other parts of the code to reach and adjust this script
     public static IncomeManager Instance { get; private set; }
+
+    // UI Element we have to adjust depending on income and turns remaining untill that income
     public Text incomeText;
 
     // Start is called before the first frame update
@@ -51,14 +56,10 @@ public class IncomeManager : MonoBehaviour
         }
 
         // Update the UI
-        if (currentTurnsTillIncome > 1)
-        {
-            incomeText.text = "You will receive " + currentIncome + " IMU in " + currentTurnsTillIncome + " turn.";
-        }
-        else
-        {
-            incomeText.text = "You will receive " + currentIncome + " IMU in " + currentTurnsTillIncome + " turns.";
-        }
+        string sAddition = "";
+        if (currentTurnsTillIncome > 1) sAddition = "s";
+
+        incomeText.text = "You will receive " + currentIncome + " IMU in " + currentTurnsTillIncome + " turn" + sAddition + ".";
     }
 
     // Public function to be called by events or anything inbetween to alter the income.
@@ -101,14 +102,6 @@ public class IncomeManager : MonoBehaviour
 
             case "-":
                 currentTurnsTillIncome -= value;
-                break;
-
-            case "/":
-                currentTurnsTillIncome /= value;
-                break;
-
-            case "*":
-                currentTurnsTillIncome *= value;
                 break;
 
             default:
