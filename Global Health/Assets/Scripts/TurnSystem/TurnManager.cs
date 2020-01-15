@@ -56,16 +56,21 @@ public class TurnManager : MonoBehaviour
         {
             GameObject.Destroy(child.gameObject);
         }
-        //Advance Building construction by 1
 
-        foreach(GameObject Building in Buildings)
+        //Advance Building construction by 1
+        foreach (GameObject Building in Buildings)
         {
             Building.GetComponent<BuildingConstruction>().BuildingCountdown();
-            
+        }
+
+        //Advance the IncomeManager by 1
+        if (IncomeManager.Instance)
+        {
+            IncomeManager.Instance.AdvanceTurn();
         }
 
         cardController.CardsPlayed = 0;
-        stateMachine.ChangeState(new CurrentTurnState(this));        
+        stateMachine.ChangeState(new CurrentTurnState(this));
     }
 
     public IEnumerator TurnFeedback(string text)
