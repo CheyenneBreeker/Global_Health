@@ -127,6 +127,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 219488252}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &48510945 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2659058301457924776, guid: 5d5543ac192af1d49b4800754c895f33,
+    type: 3}
+  m_PrefabInstance: {fileID: 1574378334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &54982584 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 69024533520560259, guid: 68fa1a164d195804e8a78e2e4fd9f286,
@@ -4133,6 +4139,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1050941684}
   m_CullTransparentMesh: 0
+--- !u!1 &1058520103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1760081549063796402, guid: 0ed947c8727921d44863dc626ab6a5a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1446813722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1058520104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058520103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16ac9d392edc894899ce27dfb35fd0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seaCityBuildings: {fileID: 48510945}
 --- !u!1 &1103219656
 GameObject:
   m_ObjectHideFlags: 0
@@ -6708,7 +6733,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1446813722}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1058520103}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a18871efabe8f7542acce96f8c7b2802, type: 3}

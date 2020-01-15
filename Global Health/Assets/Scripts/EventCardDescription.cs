@@ -15,6 +15,7 @@ public class EventCardDescription : MonoBehaviour
 
     public EventCardDeck test;
     public EventCardEffects effect;
+    public EventCheckBuildings check;
 
     public Animator cardAni;
     public Button nextTurnButton;
@@ -44,42 +45,59 @@ public class EventCardDescription : MonoBehaviour
 
         StartCoroutine(CardAppear());
 
-        for(int i = 0; i < c._choices; i++)
-        {
-            if (i == 0) choice1.gameObject.SetActive(true);
-            if (i == 1) choice2.gameObject.SetActive(true);
-            if (i == 2) choice3.gameObject.SetActive(true);           
-            if (i == 3) choice4.gameObject.SetActive(true);
-        }
+        if (c._country == "Sea") { check.checkSeaCity("Sea"); check.checkNearbyCities("Sea"); }
+        if (c._country == "River") { check.checkRiverCity("River"); check.checkNearbyCities("River"); }
+        if (c._country == "Forest") { check.checkForestCity("Forest"); check.checkNearbyCities("Forest"); }
+        if (c._country == "Mountain") { check.checkMountainCity("Mountain"); check.checkNearbyCities("Mountain"); }
+
+        choice3.gameObject.SetActive(true);
+        choice4.gameObject.SetActive(true);
     }
 
     public void OnButtonClick1()
     {
         AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         SetButtonsNonActive();
+        effect.CardEffect(card._name, 1);
+        loadNewDescription(card);
     }
 
     public void OnButtonClick2()
     {
         AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         SetButtonsNonActive();
-        effect.CardEffect(card._name);
+        effect.CardEffect(card._name, 2);
+        loadNewDescription(card);
     }
 
     public void OnButtonClick3()
     {
         AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         SetButtonsNonActive();
+        effect.CardEffect(card._name, 3);
+        loadNewDescription(card);
     }
 
     public void OnButtonClick4()
     {
         AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
         SetButtonsNonActive();
+        effect.CardEffect(card._name, 4);
+        loadNewDescription(card);
+    }
+
+    public void loadNewDescription(EventCard c)
+    {
+        _description.text = effect.newDescription;
     }
 
     public void SetButtonsNonActive()
     {
+        choice1.gameObject.SetActive(false);
+        choice2.gameObject.SetActive(false);
+        choice3.gameObject.SetActive(false);
+        choice4.gameObject.SetActive(false);
+
         StartCoroutine(CardDisappear());
     }
 
@@ -93,15 +111,12 @@ public class EventCardDescription : MonoBehaviour
 
     private IEnumerator CardDisappear()
     {
+        yield return new WaitForSeconds(4f);
         cardAni.Play("EventCard_Disappear");
         yield return new WaitForSeconds(1.333f);
         cardAni.Play("EventCard_Idle");
-        choice1.gameObject.SetActive(false);
-        choice2.gameObject.SetActive(false);
-        choice3.gameObject.SetActive(false);
-        choice4.gameObject.SetActive(false);
-        gameObject.SetActive(false);
 
+        gameObject.SetActive(false);
         nextTurnButton.gameObject.SetActive(true);
         test.eventActive = false;
     }

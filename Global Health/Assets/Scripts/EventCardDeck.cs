@@ -16,20 +16,20 @@ public class EventCardDeck : MonoBehaviour
 
     void Start()
     {
-        EventCard event0 = new EventCard("event0", "A new born girl in forest city refuses to drink and has a high fever. \n\n1. Send her to the nearest hospital. \n\n2. Send her to a health centre. \n\n3. Advise rest.", 3);
+        EventCard event0 = new EventCard("event0", "A newborn girl in Sea City refuses to drink, and has a high fever.  \n\n1. Send him/her to the hospital in town. \n\n2. Send him/her to the hospital in the nearby town. \n\n3. Send him/her to the health center in town. \n\n4. Advise rest.", "Sea");
         deck.Add(event0);
 
-        EventCard event1 = new EventCard("event1", "A 31-year-old man complains about an upset stomach. \n\n1. Send him to the nearest hospital. \n\n2. Send him to a health centre. \n\n3. Advise rest.", 3);
-        deck.Add(event1);
+ //       EventCard event1 = new EventCard("event1", "A 31-year-old man complains about an upset stomach. \n\n1. Send him to the nearest hospital. \n\n2. Send him to a health centre. \n\n3. Advise rest.", 3);
+ //       deck.Add(event1);
 
-        EventCard event2 = new EventCard("event2", "Near Sea city, because of a storm at sea, several fisherman have become injured. This includes 31 men and 7 women. Not everyone can be helped directly in Sea city. \n\n1. Treat the men first and send those that cannot be treated in Sea city to a different city. \n\n 2. Treat the women first and send those that cannot be treated in Sea city to a different city. \n\n 3. Treat the most injured people at Sea city, send the rest somewhere else.", 3);
-        deck.Add(event2);
+ //       EventCard event2 = new EventCard("event2", "Near Sea city, because of a storm at sea, several fisherman have become injured. This includes 31 men and 7 women. Not everyone can be helped directly in Sea city. \n\n1. Treat the men first and send those that cannot be treated in Sea city to a different city. \n\n 2. Treat the women first and send those that cannot be treated in Sea city to a different city. \n\n 3. Treat the most injured people at Sea city, send the rest somewhere else.", 3);
+ //       deck.Add(event2);
 
-        EventCard event3 = new EventCard("event3", "Three miners have started to badly cough and experience tightness in the chest. They have difficulty with breating. \n\n1. Send them to a hospital. \n\n2. Do nothing.", 2);
-        deck.Add(event3);
+ //       EventCard event3 = new EventCard("event3", "Three miners have started to badly cough and experience tightness in the chest. They have difficulty with breating. \n\n1. Send them to a hospital. \n\n2. Do nothing.", 2);
+ //       deck.Add(event3);
 
-        EventCard event4 = new EventCard("event4", "Heavy rain caused the roads to be near inaccessible. The medicine that normally has to take this road, now cannot be delivered. \n\n1. If another route is available because of an earlier played card, choose this alternate route. \n\n2. Wait for the road to be repaired. \n\n3. Let the medicine carrier still take the almost inaccessible roads.", 3);
-        deck.Add(event4);
+ //       EventCard event4 = new EventCard("event4", "Heavy rain caused the roads to be near inaccessible. The medicine that normally has to take this road, now cannot be delivered. \n\n1. If another route is available because of an earlier played card, choose this alternate route. \n\n2. Wait for the road to be repaired. \n\n3. Let the medicine carrier still take the almost inaccessible roads.", 3);
+ //       deck.Add(event4);
 
         Shuffle();
     }
