@@ -15,7 +15,7 @@ public class BuildingBonus : MonoBehaviour
         correspondingCity.healthCare += healthCareBonus;
         correspondingCity.economy += economyBonus;
         correspondingCity.schooling += schoolingBonus;
-        correspondingCity.cureSucces += cureSuccesBonus;
+        correspondingCity.drugResearch += cureSuccesBonus;
         correspondingCity.UpdateCityUI();
     }
 }

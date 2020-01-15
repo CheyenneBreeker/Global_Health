@@ -11,7 +11,7 @@ public class GameWorld : MonoBehaviour
     public int deaths;
     public int building;
     public City[] cities;
-
+    public List<GameObject> totalBuildings = new List<GameObject>();
     [SerializeField]
     private AudioClip music;
 
@@ -29,6 +29,7 @@ public class GameWorld : MonoBehaviour
         UpdateDeathrate();
         UpdateBuilding();
         UpdateGameUI();
+        GetBuildings();
 
         AudioManager.Instance.PlayMusicWithFade(music);
     }
@@ -70,6 +71,7 @@ public class GameWorld : MonoBehaviour
     }
 
     public float delayValue;
+    //Sending message to all cities to send their current population value for total population calculation
     public IEnumerator SendPopulationRequest()
     {
         population = 0;
@@ -104,6 +106,16 @@ public class GameWorld : MonoBehaviour
         yield return new WaitForSeconds(delayValueDeathrate);
     }
 
+    public void GetBuildings()
+    {
+        for (int i = 0; i < cities.Length; i++)
+        {
+            foreach (Transform building in cities[i].buildings)
+            {
+                totalBuildings.Add(building.gameObject);
+            }
+        }
+    }
 
     public void UpdateBuilding()
     {
