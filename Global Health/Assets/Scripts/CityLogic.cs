@@ -26,13 +26,13 @@ public class CityLogic : MonoBehaviour
         newPopulation = correspondingCity.currentPopulation + (int)newPopulationChanges;
         correspondingCity.currentPopulation = newPopulation;
         CityWellBeing();
-        correspondingCity.UpdateCityUI();
     }
 
     public void CityWellBeing()
     {
         correspondingCity.cityWellBeing = (correspondingCity.healthCare / amountOfEffectsOnCity) + (correspondingCity.drugResearch / amountOfEffectsOnCity) +
         (correspondingCity.economy / amountOfEffectsOnCity) + (correspondingCity.schooling / amountOfEffectsOnCity);
+        correspondingCity.UpdateCityUI();
 
     }
 }
