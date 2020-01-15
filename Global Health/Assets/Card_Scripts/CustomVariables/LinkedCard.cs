@@ -23,7 +23,14 @@ public class LinkedCard : MonoBehaviour
         {
             if (cardController.selectedCard == gameObject && cardIsBeingPlayed == false)
             {
-                StartCoroutine(ActivateCard());
+                if (linkedCard.cardCost < GameWorld.Instance.imu)
+                {
+                    StartCoroutine(ActivateCard());
+                }
+                else
+                {
+                    Debug.Log("Card is too expensive.");
+                }
             }
             else
             {
