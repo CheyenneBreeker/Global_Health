@@ -7316,7 +7316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b80cd2d1bbf8eb14daa56834627f5c51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imu: 50000000
+  imu: 30000
   population: 0
   deaths: 0
   building: 0
