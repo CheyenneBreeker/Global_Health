@@ -12,6 +12,7 @@ public class EventCardDescription : MonoBehaviour
     public Button choice2;
     public Button choice3;
     public Button choice4;
+    public Button confirm;
 
     public EventCardDeck test;
     public EventCardEffects effect;
@@ -31,6 +32,8 @@ public class EventCardDescription : MonoBehaviour
         choice2.onClick.AddListener(OnButtonClick2);
         choice3.onClick.AddListener(OnButtonClick3);
         choice4.onClick.AddListener(OnButtonClick4);
+        confirm.onClick.AddListener(Confirm);
+
     }
 
     public void LoadCard(EventCard c)
@@ -52,6 +55,10 @@ public class EventCardDescription : MonoBehaviour
 
         choice3.gameObject.SetActive(true);
         choice4.gameObject.SetActive(true);
+
+        if (c._name == "event1") check.checkForestCity("event1");
+        if (c._name == "event9") check.checkMountainCity("event9");
+        if (c._name == "event10") check.checkForestCity("event10");
     }
 
     public void OnButtonClick1()
@@ -86,9 +93,17 @@ public class EventCardDescription : MonoBehaviour
         loadNewDescription(card);
     }
 
+    public void eventAvoided()
+    {
+        SetButtonsNonActive();
+        effect.CardEffect(card._name, 5);
+        loadNewDescription(card);
+    }
+
     public void loadNewDescription(EventCard c)
     {
         _description.text = effect.newDescription;
+        confirm.gameObject.SetActive(true);
     }
 
     public void SetButtonsNonActive()
@@ -97,7 +112,10 @@ public class EventCardDescription : MonoBehaviour
         choice2.gameObject.SetActive(false);
         choice3.gameObject.SetActive(false);
         choice4.gameObject.SetActive(false);
+    }
 
+    public void Confirm()
+    {
         StartCoroutine(CardDisappear());
     }
 
@@ -111,11 +129,11 @@ public class EventCardDescription : MonoBehaviour
 
     private IEnumerator CardDisappear()
     {
-        yield return new WaitForSeconds(4f);
         cardAni.Play("EventCard_Disappear");
         yield return new WaitForSeconds(1.333f);
         cardAni.Play("EventCard_Idle");
 
+        confirm.gameObject.SetActive(false);
         gameObject.SetActive(false);
         nextTurnButton.gameObject.SetActive(true);
         test.eventActive = false;
