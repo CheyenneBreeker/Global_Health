@@ -42,15 +42,7 @@ public class EventCardDescription : MonoBehaviour
 
         gameObject.SetActive(true);
 
-        StartCoroutine(CardAppear());
-
-        for(int i = 0; i < c._choices; i++)
-        {
-            if (i == 0) choice1.gameObject.SetActive(true);
-            if (i == 1) choice2.gameObject.SetActive(true);
-            if (i == 2) choice3.gameObject.SetActive(true);           
-            if (i == 3) choice4.gameObject.SetActive(true);
-        }
+        StartCoroutine(CardAppear(c));
     }
 
     public void OnButtonClick1()
@@ -83,12 +75,20 @@ public class EventCardDescription : MonoBehaviour
         StartCoroutine(CardDisappear());
     }
 
-    private IEnumerator CardAppear()
+    private IEnumerator CardAppear(EventCard c)
     {
         yield return new WaitForSeconds(1.5f);
         cardAni.Play("EventCard_Appear");
         yield return new WaitForSeconds(2.0f);
         cardAni.Play("EventCard_Idle2");
+
+        for (int i = 0; i < c._choices; i++)
+        {
+            if (i == 0) choice1.gameObject.SetActive(true);
+            if (i == 1) choice2.gameObject.SetActive(true);
+            if (i == 2) choice3.gameObject.SetActive(true);
+            if (i == 3) choice4.gameObject.SetActive(true);
+        }
     }
 
     private IEnumerator CardDisappear()
