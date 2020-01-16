@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: SeaAddTownHall
   m_EditorClassIdentifier: 
   cardName: Sea City - Town Hall
-  cardCost: 10000
+  cardCost: 3000
   cardFlavorText: Add a townhall to Sea City
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0
   affectedCity: 1
   AddedBuilding: TownHall
-  TurnCountdown: 3
+  TurnCountdown: 0

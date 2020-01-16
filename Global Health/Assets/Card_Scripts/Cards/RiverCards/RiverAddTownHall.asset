@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: RiverAddTownHall
   m_EditorClassIdentifier: 
   cardName: River City - Town Hall
-  cardCost: 10000
-  cardFlavorText: Add a townhall to City 1
+  cardCost: 3000
+  cardFlavorText: Add a townhall River city
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0
   affectedCity: 0
   AddedBuilding: TownHall
-  TurnCountdown: 3
+  TurnCountdown: 0

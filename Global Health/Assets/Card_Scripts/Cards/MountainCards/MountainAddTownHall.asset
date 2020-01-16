@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: MountainAddTownHall
   m_EditorClassIdentifier: 
   cardName: Mountain City - Town Hall
-  cardCost: 10000
-  cardFlavorText: 'Add a townhall to the Mountain City '
+  cardCost: 3000
+  cardFlavorText: 'Add a townhall to Mountain City '
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0
   affectedCity: 2
   AddedBuilding: TownHall
-  TurnCountdown: 3
+  TurnCountdown: 0
