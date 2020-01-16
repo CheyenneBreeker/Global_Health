@@ -10,7 +10,9 @@ public class LinkedCard : MonoBehaviour
 
     private bool cardIsBeingPlayed;
     private float amountSelectedCardRaisedVertically = 30;
+    private float errorFlashTime = 0.25f;
     private GameObject currentlySelectedCard;
+    private GameObject previouslySelectedCard;
 
     private void Start()
     {
@@ -23,7 +25,18 @@ public class LinkedCard : MonoBehaviour
         {
             if (cardController.selectedCard == gameObject && cardIsBeingPlayed == false)
             {
-                StartCoroutine(ActivateCard());
+                if (linkedCard.cardCost < GameWorld.Instance.imu)
+                {
+                    StartCoroutine(ActivateCard());
+                }
+                else
+                {
+                    // Make the card flash red to indicate that it isn't being played.
+                    LeanTween.color(gameObject.GetComponent<RectTransform>(), new Color(1,0,0,1), errorFlashTime);
+                    LeanTween.color(gameObject.GetComponent<RectTransform>(), new Color(1,1,1,1), errorFlashTime).setDelay(errorFlashTime);
+
+                    Debug.Log("Card is too expensive.");
+                }
             }
             else
             {
@@ -54,19 +67,23 @@ public class LinkedCard : MonoBehaviour
     {
         currentlySelectedCard = cardController.selectedCard;
 
-        // Make the card slightly hover when it's selected
-        if (currentlySelectedCard == gameObject)
+        if (previouslySelectedCard != currentlySelectedCard)
         {
-            LeanTween.moveY(gameObject, 40 + amountSelectedCardRaisedVertically, 0.2f);
-            gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
-        }
+            // Make the card slightly hover when it's selected
+            if (currentlySelectedCard == gameObject)
+            {
+                LeanTween.moveY(gameObject, 40 + amountSelectedCardRaisedVertically, 0.2f);
+                gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+            }
 
-        // Return the card to its original position when selection gets removed (unless it is currently being played)
-        else if (!cardIsBeingPlayed)
-        {
-            LeanTween.moveY(gameObject, 40, 0.2f);
-            gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 0.7f);
+            // Return the card to its original position when selection gets removed (unless it is currently being played)
+            else if (!cardIsBeingPlayed)
+            {
+                LeanTween.moveY(gameObject, 40, 0.2f);
+                gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 0.7f);
+            }
 
+            previouslySelectedCard = currentlySelectedCard;
         }
     }
 }
