@@ -9,6 +9,7 @@ public class CityLogic : MonoBehaviour
     private int newBorns;
     private float deathChance;
     private City correspondingCity;
+    public int amountOfEffectsOnCity;
 
     private void Start()
     {
@@ -16,7 +17,7 @@ public class CityLogic : MonoBehaviour
     }
     public void NextTurn()
     {
-        deathChance = -1f + (((correspondingCity.healthCare * correspondingCity.cureSucces) /500) *0.2f);
+        deathChance = -1f + (((correspondingCity.healthCare * correspondingCity.drugResearch) /500) *0.2f);
         newPopulationChanges = (correspondingCity.currentPopulation * deathChance)/10;
         if (newPopulationChanges < 0)
             correspondingCity.deaths += ((int)newPopulationChanges);
@@ -24,6 +25,14 @@ public class CityLogic : MonoBehaviour
             correspondingCity.newBorn += ((int)newPopulationChanges);
         newPopulation = correspondingCity.currentPopulation + (int)newPopulationChanges;
         correspondingCity.currentPopulation = newPopulation;
+        CityWellBeing();
+    }
+
+    public void CityWellBeing()
+    {
+        correspondingCity.cityWellBeing = (correspondingCity.healthCare / amountOfEffectsOnCity) + (correspondingCity.drugResearch / amountOfEffectsOnCity) +
+        (correspondingCity.economy / amountOfEffectsOnCity) + (correspondingCity.schooling / amountOfEffectsOnCity);
         correspondingCity.UpdateCityUI();
+
     }
 }

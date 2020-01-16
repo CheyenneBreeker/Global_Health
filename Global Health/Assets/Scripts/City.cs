@@ -6,22 +6,23 @@ public class City : MonoBehaviour
 {
     private CityUI cityui;
     private CityLogic cityLogic;
+    public int cityWellBeing;
     public int currentPopulation;
     public int healthCare;
     public int economy;
     public int schooling;
     public int deaths; 
     public int newBorn;
-    public int cureSucces;
+    public int drugResearch;
     public Transform buildings;
     public int countBuilding;
-
     public GameObject boxPrefab;
 
     private void Start()
     {
         cityui = this.gameObject.GetComponent(typeof(CityUI)) as CityUI;
         cityLogic = this.gameObject.GetComponent(typeof(CityLogic)) as CityLogic;
+        cityLogic.CityWellBeing();
         UpdateCityUI();
     }
 
@@ -113,6 +114,6 @@ public class City : MonoBehaviour
 
     public void UpdateCityUI()
     {
-        cityui.UpdateUI(currentPopulation, healthCare, deaths, economy, newBorn, cureSucces);
+        cityui.UpdateUI(cityWellBeing,currentPopulation, healthCare, deaths, economy, newBorn, drugResearch);
     }
 }

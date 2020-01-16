@@ -11,8 +11,6 @@ public class TurnManager : MonoBehaviour
 
     // Card Controller
     public CardController cardController;
-    // Cities
-    public GameObject[] Buildings;
 
     // UI elements.
     public TurnCounter turnCounter;
@@ -58,7 +56,7 @@ public class TurnManager : MonoBehaviour
         }
 
         //Advance Building construction by 1
-        foreach (GameObject Building in Buildings)
+        foreach(GameObject Building in GameWorld.Instance.totalBuildings)
         {
             Building.GetComponent<BuildingConstruction>().BuildingCountdown();
         }
