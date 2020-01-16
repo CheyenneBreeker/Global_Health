@@ -23,9 +23,9 @@ public class TurnCounter : MonoBehaviour
     public void IncreaseTurnCount()
     {
         turnCount++;
-        turnCountText.text = "Week: " + turnCount + " / " + maxTurnCount;;
+        turnCountText.text = "Week: " + turnCount + " / " + maxTurnCount;
 
-        if (turnCount > 30)
+        if (turnCount > maxTurnCount)
         {
             turnCountText.enabled = false;
         }

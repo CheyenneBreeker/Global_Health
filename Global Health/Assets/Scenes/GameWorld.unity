@@ -1705,7 +1705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnCount: 0
-  maxTurnCount: 30
+  maxTurnCount: 20
 --- !u!114 &488053279
 MonoBehaviour:
   m_ObjectHideFlags: 0
