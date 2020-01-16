@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f44976a3a22124e812392c2574986b, type: 3}
   m_Name: SeaChangeHealthCare
   m_EditorClassIdentifier: 
-  cardName: Sea City Change Healthcare
-  cardCost: 4000
+  cardName: Sea City - Improve Health
+  cardCost: 8000
   cardFlavorText: Improve the healthcare of Sea city
   CardEffect: ChangeHealthCare
   cardValue: 2
   NegativeValue: 0
   affectedCity: 1
   AddedBuilding: 
-  TurnCountdown: 0
+  TurnCountdown: 3

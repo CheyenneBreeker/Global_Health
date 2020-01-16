@@ -2212,10 +2212,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800ab5b3223127d4699f8751d6de52a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultIncome: 5000
-  defaultTurnsTillIncome: 5
-  currentTurnsTillIncome: 0
+  defaultIncome: 15000
+  defaultTurnsTillIncome: 3
   currentIncome: 0
+  currentTurnsTillIncome: 0
   incomeText: {fileID: 928888450}
 --- !u!1 &541293629
 GameObject:

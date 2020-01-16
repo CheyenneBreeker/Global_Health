@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f44976a3a22124e812392c2574986b, type: 3}
   m_Name: RiverBuildResearch
   m_EditorClassIdentifier: 
-  cardName: River City - Build Research center
-  cardCost: 10000
-  cardFlavorText: Add a research center to City 1
+  cardName: River City - Research Center
+  cardCost: 5000
+  cardFlavorText: Add a research center to River city
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0
   affectedCity: 0
   AddedBuilding: Research_center
-  TurnCountdown: 3
+  TurnCountdown: 2
