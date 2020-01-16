@@ -19,5 +19,5 @@ MonoBehaviour:
   cardValue: 0
   NegativeValue: 0
   affectedCity: 0
-  AddedBuilding: Research_center
+  AddedBuilding: Research_Center
   TurnCountdown: 2
