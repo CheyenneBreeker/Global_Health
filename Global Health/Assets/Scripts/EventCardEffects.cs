@@ -299,7 +299,7 @@ public class EventCardEffects : ScriptableObject
                     newDescription = "Good call. The woman suffers from anemia, which she wouldn't have recovered from on her own. With professional help though, she will be just fine.";
                     GameWorld.Instance.substractIMU(1000);
                 }
-                if (choice == 3)
+                if (choice == 4)
                 {
                     newDescription = "This woman suffered from anemia. This does not become better on it's own. After a while, she started getting dizzy spells. One of those dizzy spells hit her at the wrong time, causing her to have an accident. She died shortly after.";
                     GameWorld.Instance.cities[1].UpdatePopulation(1, true);
