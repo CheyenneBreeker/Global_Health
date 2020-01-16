@@ -6,13 +6,13 @@ public class EventCard : ScriptableObject
 {
     public string _name;
     public string _description;
-    public int _choices;
+    public string _country;
     GameObject _card;
 
-    public EventCard(string name, string description, int choices)
+    public EventCard(string name, string description, string country)
     {
         _name = name;
         _description = description;
-        _choices = choices;
+        _country = country;
     }
 }
