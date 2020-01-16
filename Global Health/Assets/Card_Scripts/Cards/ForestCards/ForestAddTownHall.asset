@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f44976a3a22124e812392c2574986b, type: 3}
   m_Name: ForestAddTownHall
   m_EditorClassIdentifier: 
-  cardName: Add Townhall Forest city
-  cardCost: 10000
-  cardFlavorText: Add a townhall to the Forest city
+  cardName: Forest City - Town Hall
+  cardCost: 3000
+  cardFlavorText: Add a townhall to Forest city
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0
   affectedCity: 3
   AddedBuilding: TownHall
-  TurnCountdown: 3
+  TurnCountdown: 0

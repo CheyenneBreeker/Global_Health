@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f44976a3a22124e812392c2574986b, type: 3}
   m_Name: MountainAddSchool
   m_EditorClassIdentifier: 
-  cardName: Mountain City - Build School
-  cardCost: 0
-  cardFlavorText: Add a School to the Mountain city
+  cardName: Mountain City - School
+  cardCost: 5000
+  cardFlavorText: Add a school to Mountain city
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0
   affectedCity: 2
   AddedBuilding: School
-  TurnCountdown: 3
+  TurnCountdown: 2

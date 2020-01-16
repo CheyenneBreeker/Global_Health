@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f44976a3a22124e812392c2574986b, type: 3}
   m_Name: SeaAddHospital
   m_EditorClassIdentifier: 
-  cardName: Add hospital Sea City
-  cardCost: 10000
+  cardName: Sea City - Hospital
+  cardCost: 7500
   cardFlavorText: Add a hospital to Sea City
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0
   affectedCity: 1
   AddedBuilding: Hospital
-  TurnCountdown: 3
+  TurnCountdown: 2

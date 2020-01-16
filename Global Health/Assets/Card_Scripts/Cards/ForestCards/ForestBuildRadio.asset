@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f44976a3a22124e812392c2574986b, type: 3}
   m_Name: ForestBuildRadio
   m_EditorClassIdentifier: 
-  cardName: Forest City - Build radio tower
-  cardCost: 0
+  cardName: Forest City - Radio Tower
+  cardCost: 3000
   cardFlavorText: Add a radio tower to the Forest city
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0
   affectedCity: 3
   AddedBuilding: RadioTower
-  TurnCountdown: 3
+  TurnCountdown: 1

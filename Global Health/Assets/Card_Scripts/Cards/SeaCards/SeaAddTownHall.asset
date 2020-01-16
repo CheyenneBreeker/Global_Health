@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f44976a3a22124e812392c2574986b, type: 3}
   m_Name: SeaAddTownHall
   m_EditorClassIdentifier: 
-  cardName: Add Townhall Sea City
+  cardName: Sea City - Town Hall
   cardCost: 10000
   cardFlavorText: Add a townhall to Sea City
   CardEffect: ConstructBuilding
