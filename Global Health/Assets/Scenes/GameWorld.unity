@@ -7741,8 +7741,8 @@ MonoBehaviour:
   building: 0
   cities:
   - {fileID: 5323950}
-  - {fileID: 562531765}
   - {fileID: 923281068}
+  - {fileID: 562531765}
   - {fileID: 665676620}
   totalBuildings: []
   music: {fileID: 8300000, guid: 67032d49d1ce9e4438f7f67b7c86ad0c, type: 3}
@@ -8079,6 +8079,11 @@ PrefabInstance:
     - target: {fileID: 7559102296600409102, guid: 65fd9ab7e3fd24245b2b4aade06b1916,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079088260428155393, guid: 65fd9ab7e3fd24245b2b4aade06b1916,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
