@@ -86,11 +86,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8511923964666874648, guid: 6c78550e23ff35748b80b0c9a532c300,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayingCard
-      objectReference: {fileID: 0}
     - target: {fileID: 5436139477411639493, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -196,6 +191,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8511923964666874648, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayingCard
+      objectReference: {fileID: 0}
     - target: {fileID: 6833218671151812017, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: cardController
@@ -277,6 +277,21 @@ PrefabInstance:
       propertyPath: m_Text
       value: Improve the healthcare of City 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3024430113967368928, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3024430113967368928, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3024430113967368928, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 2437549226474735369, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_Text
@@ -285,12 +300,12 @@ PrefabInstance:
     - target: {fileID: 2437549226474735369, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2437549226474735369, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_FontData.m_MinSize
-      value: 9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2437549226474735369, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
