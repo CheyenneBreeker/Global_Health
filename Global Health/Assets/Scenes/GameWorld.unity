@@ -2234,6 +2234,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4702163874385634888, guid: 4e6e0e209e1f331489a009e69bf783e0,
+        type: 3}
+      propertyPath: economy
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e6e0e209e1f331489a009e69bf783e0, type: 3}
 --- !u!1 &549069074
@@ -7020,6 +7025,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain city
       objectReference: {fileID: 0}
+    - target: {fileID: 3266546406009830605, guid: 5b519c3357d7c054e92bfed92e326bbc,
+        type: 3}
+      propertyPath: economy
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3266546406009830606, guid: 5b519c3357d7c054e92bfed92e326bbc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7830,6 +7840,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: River city
       objectReference: {fileID: 0}
+    - target: {fileID: 6361533195119235460, guid: b9c7cd7672daf774087b296819bf1387,
+        type: 3}
+      propertyPath: economy
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6361533195119235463, guid: b9c7cd7672daf774087b296819bf1387,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8012,6 +8027,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Forest city
+      objectReference: {fileID: 0}
+    - target: {fileID: 7559102296600409101, guid: 65fd9ab7e3fd24245b2b4aade06b1916,
+        type: 3}
+      propertyPath: healthCare
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7559102296600409102, guid: 65fd9ab7e3fd24245b2b4aade06b1916,
         type: 3}

@@ -87,7 +87,7 @@ public class EventCardDeck : MonoBehaviour
         int diceValue = Random.Range(1, 7);
         diceValue = diceValue + eventTriggers;
 
-        if (diceValue >= 6)
+        if (diceValue >= 4)
         {
             TakeCard();
             AudioManager.Instance.PlayEventSFX(eventSFX, 1);
