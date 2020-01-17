@@ -5309,7 +5309,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '- Use the arrow keys, the WASD keys and the scroll wheel to move the camera.
 
-    - Hold Rightclick to rotate the camera.
+    - Hold right click to rotate the camera.
 
     - Select cities to see their statistics.
 
