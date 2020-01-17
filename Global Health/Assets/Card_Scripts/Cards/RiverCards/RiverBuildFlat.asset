@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f44976a3a22124e812392c2574986b, type: 3}
   m_Name: RiverBuildFlat
   m_EditorClassIdentifier: 
-  cardName: River City - Appartments
+  cardName: River City - Apartments
   cardCost: 4000
-  cardFlavorText: Add an appartment building to River city
+  cardFlavorText: Add an apartment building to River city
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0

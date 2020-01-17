@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f44976a3a22124e812392c2574986b, type: 3}
   m_Name: MountainBuildFlat
   m_EditorClassIdentifier: 
-  cardName: Mountain City - Appartments
+  cardName: Mountain City - Apartments
   cardCost: 4000
-  cardFlavorText: Add an appartment building to Mountain city
+  cardFlavorText: Add an apartment building to Mountain city
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0
