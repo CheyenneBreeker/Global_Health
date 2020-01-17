@@ -25,14 +25,9 @@ public class EventCheckBuildings : MonoBehaviour
                 choices.choice2.gameObject.SetActive(true);
             }
 
-            if (building.name == "Flat")
+            if (building.name == "Clinic" && building.gameObject.activeSelf == true && name == "Sea")
             {
-
-            }
-
-            if (building.name == "School")
-            {
-
+                choices.choice3.gameObject.SetActive(true);
             }
         }
     }
@@ -51,14 +46,9 @@ public class EventCheckBuildings : MonoBehaviour
                 choices.choice2.gameObject.SetActive(true);
             }
 
-            if (building.name == "Flat")
+            if (building.name == "Clinic" && building.gameObject.activeSelf == true && name == "River")
             {
-
-            }
-
-            if (building.name == "School")
-            {
-
+                choices.choice3.gameObject.SetActive(true);
             }
         }
     }
@@ -89,6 +79,11 @@ public class EventCheckBuildings : MonoBehaviour
             {
                 choices.eventAvoided();
             }
+
+            if (building.name == "Clinic" && building.gameObject.activeSelf == true && name == "Forest")
+            {
+                choices.choice3.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -112,6 +107,11 @@ public class EventCheckBuildings : MonoBehaviour
                 {
                     choices.eventAvoided();
                 }
+            }
+
+            if (building.name == "Clinic" && building.gameObject.activeSelf == true && name == "Mountain")
+            {
+                choices.choice3.gameObject.SetActive(true);
             }
         }
     }

@@ -53,7 +53,6 @@ public class EventCardDescription : MonoBehaviour
         if (c._country == "Forest") { check.checkForestCity("Forest"); check.checkNearbyCities("Forest"); }
         if (c._country == "Mountain") { check.checkMountainCity("Mountain"); check.checkNearbyCities("Mountain"); }
 
-        choice3.gameObject.SetActive(true);
         choice4.gameObject.SetActive(true);
 
         if (c._name == "event1") check.checkForestCity("event1");
