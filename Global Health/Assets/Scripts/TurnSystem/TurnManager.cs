@@ -49,6 +49,7 @@ public class TurnManager : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX(buttonClicksSFX, 1);
 
+
         //remove cards on canvas
         foreach (Transform child in cardController.CardContainer.transform)
         {
@@ -77,5 +78,9 @@ public class TurnManager : MonoBehaviour
         turnFeedback.gameObject.GetComponent<Animator>().Play("TurnFeedback_Action");
         yield return new WaitForSeconds(1.5f);
         turnFeedback.gameObject.GetComponent<Animator>().Play("TurnFeedback_Idle");
+
+        // Update the UI of gameworld.cs
+        GameWorld.Instance.UpdatePopulation();
+        GameWorld.Instance.UpdateDeathrate();
     }
 }
