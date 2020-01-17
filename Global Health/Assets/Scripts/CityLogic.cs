@@ -20,7 +20,7 @@ public class CityLogic : MonoBehaviour
         deathChance = -1f + (((correspondingCity.healthCare * correspondingCity.drugResearch) /500) *0.2f);
         newPopulationChanges = (correspondingCity.currentPopulation * deathChance)/10;
         if (newPopulationChanges < 0)
-            correspondingCity.deaths += ((int)newPopulationChanges);
+            correspondingCity.deaths -= ((int)newPopulationChanges);
         else
             correspondingCity.newBorn += ((int)newPopulationChanges);
         newPopulation = correspondingCity.currentPopulation + (int)newPopulationChanges;
