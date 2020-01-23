@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: RiverChangeHealthCare
   m_EditorClassIdentifier: 
   cardName: River City - Improve Health
-  cardCost: 8000
+  cardCost: 2500
   cardFlavorText: Improve the healthcare of River city
   CardEffect: ChangeHealthCare
   cardValue: 2
   NegativeValue: 0
   affectedCity: 0
-  AddedBuilding: CityGreenGood
-  TurnCountdown: 3
+  AddedBuilding: 
+  TurnCountdown: 0

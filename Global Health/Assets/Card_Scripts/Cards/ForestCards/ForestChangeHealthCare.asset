@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: ForestChangeHealthCare
   m_EditorClassIdentifier: 
   cardName: Forest City - Improve
-  cardCost: 8000
+  cardCost: 2500
   cardFlavorText: Improve the healthcare of Forest city
   CardEffect: ChangeHealthCare
   cardValue: 2
   NegativeValue: 0
   affectedCity: 3
-  AddedBuilding: CityPurpleGood
-  TurnCountdown: 3
+  AddedBuilding: 
+  TurnCountdown: 0
