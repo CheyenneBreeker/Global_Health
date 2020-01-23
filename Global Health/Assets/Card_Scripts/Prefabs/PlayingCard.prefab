@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49.8, y: 60.5}
-  m_SizeDelta: {x: 20, y: 17.4}
+  m_AnchoredPosition: {x: 57.1, y: 66.2}
+  m_SizeDelta: {x: 40, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1849927401379530600
 CanvasRenderer:
@@ -70,15 +70,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 2
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '3
-
-'
+  m_Text: 2
 --- !u!1001 &5641732749632859983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154,12 +152,12 @@ PrefabInstance:
     - target: {fileID: 5436139477411639493, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 5436139477411639493, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 150
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 5436139477411639493, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
@@ -205,7 +203,8 @@ PrefabInstance:
         type: 3}
       propertyPath: linkedCard
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: d720ba748e2694141841ea7750cc95bb,
+        type: 2}
     - target: {fileID: 6539172685268293061, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_Sprite
@@ -225,7 +224,7 @@ PrefabInstance:
     - target: {fileID: 9135880325081148344, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 131.5
+      value: 140.5
       objectReference: {fileID: 0}
     - target: {fileID: 9135880325081148344, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
@@ -235,12 +234,12 @@ PrefabInstance:
     - target: {fileID: 4195911371329468046, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 60.5
+      value: 66.8
       objectReference: {fileID: 0}
     - target: {fileID: 4195911371329468046, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -44.3
+      value: -43.3
       objectReference: {fileID: 0}
     - target: {fileID: 4195911371329468046, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
@@ -255,12 +254,17 @@ PrefabInstance:
     - target: {fileID: 4146279324868907772, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 38.9
+      value: 43.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146279324868907772, guid: 6c78550e23ff35748b80b0c9a532c300,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 490593255469483776, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_Text
-      value: 4000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 490593255469483776, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
@@ -270,12 +274,12 @@ PrefabInstance:
     - target: {fileID: 490593255469483776, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_FontData.m_Alignment
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3024430113967368928, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_Text
-      value: Improve the healthcare of City 1
+      value: Add a research center to River city
       objectReference: {fileID: 0}
     - target: {fileID: 3024430113967368928, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
@@ -295,7 +299,7 @@ PrefabInstance:
     - target: {fileID: 2437549226474735369, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_Text
-      value: City 2 Change Healthcare
+      value: River City - Research Center
       objectReference: {fileID: 0}
     - target: {fileID: 2437549226474735369, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
@@ -310,7 +314,7 @@ PrefabInstance:
     - target: {fileID: 2437549226474735369, guid: 6c78550e23ff35748b80b0c9a532c300,
         type: 3}
       propertyPath: m_FontData.m_Alignment
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c78550e23ff35748b80b0c9a532c300, type: 3}
