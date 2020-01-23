@@ -19,5 +19,5 @@ MonoBehaviour:
   cardValue: 2
   NegativeValue: 0
   affectedCity: 2
-  AddedBuilding: 
+  AddedBuilding: CityRedGood
   TurnCountdown: 3

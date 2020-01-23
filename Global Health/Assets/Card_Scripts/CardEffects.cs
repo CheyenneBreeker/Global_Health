@@ -27,12 +27,15 @@ public class CardEffects : MonoBehaviour
         int cardValue = (int)CardVariables.cardValue;
         bool cardBool = (bool)CardVariables.NegativeValue;
 
+        string cardString = (string)CardVariables.AddedBuilding;
+        int CardTime = (int)CardVariables.TurnCountdown;
+
+        GameWorld.Instance.cities[affectedCity].ConstructBuilding(cardString,CardTime);
         GameWorld.Instance.cities[affectedCity].UpdateHealthCare(cardValue, cardBool);
     }
 
     public void ConstructBuilding(ScriptableCard CardVariables)
     {
-
         int affectedCity = (int)CardVariables.affectedCity;
         string cardString = (string)CardVariables.AddedBuilding;
         int CardTime = (int)CardVariables.TurnCountdown;
