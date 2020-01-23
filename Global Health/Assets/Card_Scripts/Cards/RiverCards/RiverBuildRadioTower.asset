@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: RiverBuildRadioTower
   m_EditorClassIdentifier: 
   cardName: River City - Radio Tower
-  cardCost: 3000
-  cardFlavorText: Add a radio tower to River city
+  cardCost: 6000
+  cardFlavorText: Add a radio tower to River city, improving the economy by 20% and
+    improving cure chances slightly.
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0
   affectedCity: 0
   AddedBuilding: RadioTower
-  TurnCountdown: 1
+  TurnCountdown: 2

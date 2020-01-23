@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Mountain City - Hospital
   cardCost: 7500
-  cardFlavorText: Add a hospital to Mountain city
+  cardFlavorText: Add a hospital to Mountain city, improving healthcare by 20%
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0

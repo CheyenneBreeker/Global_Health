@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: MountainBuildRadio
   m_EditorClassIdentifier: 
   cardName: Mountain City - Radio Tower
-  cardCost: 3000
-  cardFlavorText: Add a radio tower to Mountain city
+  cardCost: 6000
+  cardFlavorText: Add a radio tower to Mountain city, improving the economy by 20%
+    and improving cure chances slightly.
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0
   affectedCity: 2
   AddedBuilding: RadioTower
-  TurnCountdown: 1
+  TurnCountdown: 2

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Forest City - Clinic
   cardCost: 5000
-  cardFlavorText: Add a clinic to Forest city
+  cardFlavorText: Add a clinic to Forest city, improving healthcare by 10%
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0

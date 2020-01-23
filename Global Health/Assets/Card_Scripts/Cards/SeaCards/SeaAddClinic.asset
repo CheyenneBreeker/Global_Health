@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Sea City - Clinic
   cardCost: 5000
-  cardFlavorText: Add a clinic to Sea city
+  cardFlavorText: Add a clinic to Sea city, improving healthcare by 10%
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0

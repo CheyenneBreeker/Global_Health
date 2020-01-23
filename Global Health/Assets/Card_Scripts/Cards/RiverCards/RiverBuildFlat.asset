@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: River City - Apartments
   cardCost: 4000
-  cardFlavorText: Add an apartment building to River city
+  cardFlavorText: Add an apartment building to River city, improving economy by 20%
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0

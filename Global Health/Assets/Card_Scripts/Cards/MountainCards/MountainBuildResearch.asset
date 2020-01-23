@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Mountain City - Research Center
   cardCost: 5000
-  cardFlavorText: Add a research center to Mountain city
+  cardFlavorText: Add a research center to Mountain city, improving the healthcare
+    by 10% and massively boosting cure chances.
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: River City - School
   cardCost: 5000
-  cardFlavorText: Add a school to the River city
+  cardFlavorText: Add a school to the River city, improving schooling by 30%
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0

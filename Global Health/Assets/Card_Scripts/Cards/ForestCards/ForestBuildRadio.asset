@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: ForestBuildRadio
   m_EditorClassIdentifier: 
   cardName: Forest City - Radio Tower
-  cardCost: 3000
-  cardFlavorText: Add a radio tower to the Forest city
+  cardCost: 6000
+  cardFlavorText: Add a radio tower to the Forest city, improving the economy by 20%
+    and improving cure chances slightly.
   CardEffect: ConstructBuilding
   cardValue: 0
   NegativeValue: 0
   affectedCity: 3
   AddedBuilding: RadioTower
-  TurnCountdown: 1
+  TurnCountdown: 2
