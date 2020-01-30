@@ -3042,7 +3042,7 @@ MonoBehaviour:
   survivorsText: {fileID: 2022931571}
   deathrateText: {fileID: 1783521562}
   buildingsText: {fileID: 655789397}
-  multiplier: 4
+  multiplier: 100
   pop:
   - {fileID: 1865075067}
   - {fileID: 1235688309}
@@ -3058,7 +3058,7 @@ MonoBehaviour:
   - {fileID: 38085760}
   - {fileID: 701026959}
   - {fileID: 706122866}
-  buttonClicksSFX: {fileID: 8300000, guid: d94ef45e4cbede449807ef9694281cac, type: 3}
+  buttonClicksSFX: {fileID: 8300000, guid: 9533b32cfc1a08440b3b9fb22b8c0312, type: 3}
   music: {fileID: 8300000, guid: 8640a8ab127bac844beef8ceaa08ad1b, type: 3}
 --- !u!4 &2088051672
 Transform:

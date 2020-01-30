@@ -83,6 +83,8 @@ public class City : MonoBehaviour
                 // Create the box and add the building to the box effect to have it open up at the right time
                 GameObject createdBox = Instantiate(boxPrefab, new Vector3(building.gameObject.transform.position.x, 0.6f, building.gameObject.transform.position.z), Quaternion.identity);
                 createdBox.GetComponent<BoxEffectScript>().buildingToCover = building.gameObject;
+                countBuilding++;
+                SendBuilding();
 
                 if (building.gameObject.GetComponent<BuildingConstruction>().CountdownStarted == false)
                 {
@@ -93,10 +95,8 @@ public class City : MonoBehaviour
             else
             {
                 Debug.Log("Did not find Building: " + buildingName);
-                countBuilding++;
             }
         }
-        SendBuilding();
     }
 
     public void SendBuilding()

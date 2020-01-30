@@ -6476,7 +6476,7 @@ MonoBehaviour:
   - {fileID: 1464521667}
   - {fileID: 1416143969}
   - {fileID: 1001571625}
-  buttonClicksSFX: {fileID: 8300000, guid: d94ef45e4cbede449807ef9694281cac, type: 3}
+  buttonClicksSFX: {fileID: 8300000, guid: 9533b32cfc1a08440b3b9fb22b8c0312, type: 3}
   music: {fileID: 8300000, guid: 5119561cf9c95924fbb3f0129247b8a8, type: 3}
 --- !u!4 &2022554144
 Transform:

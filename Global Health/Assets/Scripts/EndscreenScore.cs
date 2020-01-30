@@ -15,7 +15,7 @@ public class EndscreenScore : MonoBehaviour
     int deathrate;
     int buildings;
 
-    public int multiplier = 4;
+    public int multiplier = 100;
 
     int totalScore;
 
@@ -40,7 +40,7 @@ public class EndscreenScore : MonoBehaviour
         buildings = GameWorld.Instance.building;
         buildingsText.text = "Total Buildings: " + buildings.ToString();
 
-        totalScore = survivors + buildings * multiplier - deathrate;
+        totalScore = (survivors + buildings * multiplier) - deathrate;
 
         totalScoreText.text = "Total Score: " + totalScore.ToString();
 
@@ -51,7 +51,7 @@ public class EndscreenScore : MonoBehaviour
             building[i].text = "Buildings: " + GameWorld.Instance.cities[i].countBuilding.ToString();
         }
 
-        AudioManager.Instance.PlayMusicWithFade(music);
+        //AudioManager.Instance.PlayMusicWithFade(music);
 
         Destroy(GameObject.Find("GameWorldCanvas"));
     }
