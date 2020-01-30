@@ -124,6 +124,7 @@ public class GameWorld : MonoBehaviour
 
     public void NewBuilding(int newbuilding)
     {
+        // Add the new count of buildings to the old count og buildings 
         building += newbuilding;
     }
 
@@ -134,6 +135,7 @@ public class GameWorld : MonoBehaviour
 
         for (int i = 0; i < cities.Length; i++)
         {
+            // Access every city to send their count of buildings 
             cities[i].SendBuilding();
         }
         yield return new WaitForSeconds(delayValueBuilding);

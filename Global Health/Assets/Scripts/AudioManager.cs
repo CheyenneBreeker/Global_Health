@@ -14,9 +14,12 @@ public class AudioManager : MonoBehaviour
         {
             if (instance == null)
             {
+                // Look through all the active scenes for a component type of audio manager
                 instance = FindObjectOfType<AudioManager>();
                 if (instance == null)
                 {
+                    // Spawn gameobject audio manager if no audio manager is found
+                    // add this script to the gameobject
                     instance = new GameObject("Spawned AudioManager", typeof(AudioManager))
                         .GetComponent<AudioManager>();
                 }
@@ -24,6 +27,7 @@ public class AudioManager : MonoBehaviour
 
             return instance;
         }
+        // Can only set to this script
         private set
         {
             instance = value;
@@ -45,6 +49,13 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null)
+        {
+            DestroyImmediate(gameObject);
+            return;
+        }
+        Instance = this;
+
         // Make sure we don't destroy this instance
         DontDestroyOnLoad(this.gameObject);
 
@@ -53,6 +64,7 @@ public class AudioManager : MonoBehaviour
         musicSource2 = this.gameObject.AddComponent<AudioSource>();
         sfxSource = this.gameObject.AddComponent<AudioSource>();
 
+        // Make the audio mixer accessible for the audio slider to work
         musicSource.outputAudioMixerGroup = AmbientAudioMixer;
         musicSource2.outputAudioMixerGroup = AmbientAudioMixer;
 
@@ -67,6 +79,7 @@ public class AudioManager : MonoBehaviour
     public void PlayMusicWithFade(AudioClip newClip, float transitionTime = 1.0f)
     {
         // Determine which source is active
+        // if firstMusicSourceIsPlaying is true, set activeSource as musicSource, else musicSource2
         AudioSource activeSource = (firstMusicSourceIsPlaying) ? musicSource : musicSource2;
         StartCoroutine(UpdateMusicWithFade(activeSource, newClip, transitionTime));
     }
@@ -85,6 +98,7 @@ public class AudioManager : MonoBehaviour
         // Fade out
         for (t = 0; t < transitionTime; t += Time.deltaTime)
         {
+            // Make the audio start from maximum volume and decrease when every second goes by 
             activeSource.volume = (1 - (t / transitionTime));
             yield return null;
         }
@@ -96,6 +110,7 @@ public class AudioManager : MonoBehaviour
         // Fade in
         for (t = 0; t < transitionTime; t += Time.deltaTime)
         {
+            // Make the audio volume increase overtime to maximum volume value 1.0f
             activeSource.volume = (t / transitionTime);
             yield return null;
         }
@@ -110,24 +125,4 @@ public class AudioManager : MonoBehaviour
     {
         sfxSource.PlayOneShot(clip, volume);
     }
-
-    ////Used by the SFXVolumeSlider onChange
-    //public void SetSFXVolume(float volume)
-    //{
-    //    EffectsAudioMixer.audioMixer.SetFloat("SFXVolume", volume);
-
-    //    //Save the current volume in PlayerPrefs for future sessions
-    //    PlayerPrefs.SetFloat("SFXVolume", volume);
-    //    PlayerPrefs.Save();
-    //}
-
-    ////Used by the ambientVolume slider onChange
-    //public void SetAmbientVolume(float volume)
-    //{
-    //    AmbientAudioMixer.audioMixer.SetFloat("AmbientVolume", volume);
-
-    //    //Save the current volume in PlayerPrefs for future sessions
-    //    PlayerPrefs.SetFloat("AmbientVolume", volume);
-    //    PlayerPrefs.Save();
-    //}
 }
