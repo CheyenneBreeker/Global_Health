@@ -3,32 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
-public class IPTransfer : MonoBehaviour
+public class RoomTransfer : MonoBehaviour
 {
-    public string username;
+    public string roomname;
     public GameObject inputField;
     public GameObject textDisplay;
 
     string ipv4 = IPManager.GetIP(ADDRESSFAM.IPv4);
 
-    public void StoreName()
+    public void StoreRoom()
     {
-        username = inputField.GetComponent<Text>().text;
-        textDisplay.GetComponent<Text>().text = "Welcome " + username.ToString();
-        StartCoroutine(GetUsername(username, ipv4));
-        SceneManager.LoadScene("RoomScene");
+        roomname = inputField.GetComponent<Text>().text;
+        textDisplay.GetComponent<Text>().text = "Created " + roomname.ToString();
+        StartCoroutine(GetRoomname(roomname, ipv4));
     }
 
-    IEnumerator GetUsername(string username, string ipaddress)
+    IEnumerator GetRoomname(string roomname, string ipaddress)
     {
         WWWForm form = new WWWForm();
-        form.AddField("userName", username);
+        form.AddField("roomName", roomname);
         form.AddField("userIP", ipaddress);
 
 
-        using (UnityWebRequest www = UnityWebRequest.Post("https://epigastric-conseque.000webhostapp.com/GetUserIP.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("https://epigastric-conseque.000webhostapp.com/GetRoom.php", form))
         {
             yield return www.SendWebRequest();
 
